@@ -1,11 +1,10 @@
-.cta {
+.cta,
+.input {
   font-family: "Open Sans", sans-serif;
   display: inline-block;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
   letter-spacing: 1px;
   line-height: normal !important;
+  font-size: 1.4rem;
   -webkit-appearance: none;
 }
 
@@ -50,17 +49,17 @@ h3 {
 
 .text-bold {
   font-weight: 700;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 }
 
 .text-regular {
   font-weight: 400;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 }
 
 .text-small {
   font-weight: 400;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .text-black {
@@ -69,6 +68,10 @@ h3 {
 
 .text-grey {
   color: #858586;
+}
+
+.width-50 {
+  width: 50% !important;
 }
 
 .width-40 {
@@ -80,23 +83,27 @@ h3 {
 }
 
 .margin-bottom-xs {
-  margin-bottom: 1rem;
+  margin-bottom: 1rem !important;
 }
 
 .margin-bottom-s {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem !important;
 }
 
 .margin-bottom-m {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2.5rem !important;
 }
 
 .margin-bottom-l {
-  margin-bottom: 4rem;
+  margin-bottom: 4rem !important;
 }
 
 .margin-bottom-xl {
-  margin-bottom: 5.5rem;
+  margin-bottom: 5.5rem !important;
+}
+
+.text-center {
+  text-align: center !important;
 }
 
 .link:link,
@@ -249,6 +256,67 @@ h3 {
   text-align: center;
 }
 
+.container {
+  padding: 8rem 3rem;
+  border: 1px solid #858586;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container--m {
+  width: 35%;
+  border-radius: 3rem;
+}
+
+.input {
+  width: 100%;
+  padding: .5rem 1rem;
+  border: 1px solid #858586;
+  border-radius: 1.2rem;
+}
+
+.input:focus,
+.input:active {
+  outline: none;
+}
+
+input[type=file] {
+  width: 100%;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form div {
+  margin-bottom: 1.5rem;
+}
+
+.form input[type=submit] {
+  margin-top: 2rem;
+}
+
+.form__input {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form__input > p {
+  width: 100%;
+  text-align: left;
+  margin-bottom: .5rem;
+  margin-left: .8rem;
+}
+
 .header {
   height: -webkit-max-content;
   height: -moz-max-content;
@@ -332,5 +400,10 @@ h3 {
 
 .home > *:not(:last-child) {
   border-bottom: 1px solid #858586;
+}
+
+.login,
+.register {
+  padding: 7rem 15rem;
 }
 

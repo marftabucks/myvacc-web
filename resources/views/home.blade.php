@@ -12,8 +12,8 @@
             <div class="media__content">
                 <h1 class="heading-1 margin-bottom-s">MyVacc</h1>
                 <p class="text-regular margin-bottom-m">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nostrum id quos magnam facilis obcaecati earum possimus consectetur, quis laboriosam quibusdam, officia deserunt deleniti illo.</p>
-                <a href="#" class="cta cta--white margin-bottom-xs">Log in</a>
-                <p class="text-small">Don't have an account? <a href="#" class="link text-small">Register Now</a></p>
+                <a href="#" class="cta cta--white margin-bottom-xs">Log In</a>
+                <p class="text-small">Don't have an account? <a href="#" class="link text-small">Register now</a></p>
             </div>
         </div>
     </section>
@@ -50,7 +50,8 @@
     </section>
 
     <section class="home-reasons">
-        <h1 class="heading-1 margin-bottom-xl">Coronavirus Facts</h1>
+        <h1 class="heading-1 margin-bottom-m">Why should you vaccinate?</h1>
+        <p class="text-regular text-center width-50 margin-bottom-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores ex eaque quos veniam, eum tempora, dolorum laborum dolore minima minus quaerat unde dicta nulla fugit similique quisquam quis ratione labore?</p>
 
         <div class="card-wrapper--flex margin-bottom-xl">
             <div class="card card--l card--borderless">
