@@ -1,12 +1,14 @@
 .header {
     height: max-content;
 
+    background: linear-gradient(90deg, rgba(0,79,142,1) 0%, rgba(0,212,255,1) 100%);
+    color: $color-white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2.5rem 15rem;
+    padding: 3.5rem 15rem;
     z-index: 100;
-    border-bottom: 1px solid $color-grey;
+    // border-bottom: 1px solid $color-grey;
 
     & > * {
         height: 100%;

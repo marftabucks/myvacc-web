@@ -24,15 +24,15 @@
     <body>
         <nav class="header">
             <div class="header__link-box">
-                <a href="/" class="logo-box">
+                <a href="/home" class="logo-box">
                     <!-- <img src="" alt="" class="logo"> -->
                     <p class="text-bold text-white text-uppercase">MyVacc</p>
                 </a>
-                <a href="#" class="link-item"><p class="text-bold text-black">Home</p></a>
-                <a href="#" class="link-item"><p class="text-bold text-black">Contact Us</p></a>
+                <a href="/home" class="link-item"><p class="text-bold text-white">Home</p></a>
+                <a href="#" class="link-item"><p class="text-bold text-white">Contact Us</p></a>
             </div>
             <div class="header__util">
-                <a href="/login" class="link-item"><p class="text-bold text-black">Login</p></a>
+                <a href="/login" class="link-item"><p class="text-bold text-white">Login</p></a>
             </div>
         </nav>
 
@@ -44,11 +44,11 @@
                 <p class="text-bold text-white text-uppercase">MyVacc</p>
             </div>
             <div class="header__link-box">
-                <a href="#" class="link-item"><p class="text-regular text-grey">Home</p></a>
-                <a href="#" class="link-item"><p class="text-regular text-grey">Contact Us</p></a>
+                <a href="#" class="link-item"><p class="text-regular text-white">Home</p></a>
+                <a href="#" class="link-item"><p class="text-regular text-white">Contact Us</p></a>
             </div>
             <div class="header__util">
-                <p class="text-regular text-grey">&#169;2020-Form | All Rights Reserved</p>
+                <p class="text-regular text-white">&#169;2020-Form | All Rights Reserved</p>
             </div>
         </footer>
     </body>
