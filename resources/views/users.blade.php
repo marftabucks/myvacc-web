@@ -1,6 +1,5 @@
 @extends('layout')
 
 @section('content')
-    WOI RESPONSI ANJENG
-    INI HALAMAN USER
+    WOI RESPONSI ya anak baik.. ALhamdulillaaaahhhhh
 @stop

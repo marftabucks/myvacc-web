@@ -1,5 +1,5 @@
 @extends('layout')
 
 @section('content')
-    INI HOME YAK ANJENG
+    INI HOME YAK dari kami anak baik baik
 @stop
