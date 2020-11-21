@@ -1,0 +1,17 @@
+.footer {
+    height: max-content;
+
+    border-top: 1px solid $color-grey;
+    background-color: white;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 15rem;
+
+    & > * {
+        height: 100%;
+    }
+}

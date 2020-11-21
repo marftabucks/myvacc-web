@@ -1,0 +1,11 @@
+.home {
+
+    & > * {
+        padding: 7rem 15rem;
+    }
+
+    & > *:not(:last-child) {
+        border-bottom: 1px solid $color-grey;
+    }
+
+}
