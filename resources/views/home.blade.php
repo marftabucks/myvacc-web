@@ -1,5 +1,5 @@
 @extends('layout')
 
 @section('content')
-    INI HOME YAK
+    INI HOME YAK ANJENG
 @stop
