@@ -13,19 +13,35 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
     return view('home');
 });
 
+Route::get('home', function()
+{
+    return View::make('home');
+});
+
+Route::get('users', function()
+{
+    return View::make('users');
+});
+
+// AUTH
+
 Route::get('login', function()
 {
-    return View::make('login');
+    return View::make('auth/login');
 });
 
 Route::get('register', function()
 {
-    return View::make('register');
+    return View::make('auth/register');
 });
+
+
+// USER
 
 Route::get('vaccination-form', function()
 {
@@ -37,6 +53,17 @@ Route::get('vaccination-ticket', function()
     return View::make('vaccination-ticket');
 });
 
+Route::get('profile-patient', function()
+{
+    return View::make('profile-patient');
+});
+
+Route::get('edit-profile-patient', function()
+{
+    return View::make('edit-profile-patient');
+});
+
+// PEMERINTAH
 Route::get('dashboard-pemerintah-patients', function()
 {
     return View::make('dashboard-pemerintah-patients');
@@ -57,6 +84,8 @@ Route::get('edit-hospital', function()
     return View::make('edit-hospital');
 });
 
+
+// RUMAH SAKIT
 Route::get('dashboard hospital-quota', function()
 {
     return View::make('dashboard hospital-quota');
@@ -67,32 +96,12 @@ Route::get('dashboard hospital-patients', function()
     return View::make('dashboard hospital-patients');
 });
 
-Route::get('profile-patient', function()
-{
-    return View::make('profile-patient');
-});
-
 Route::get('profile-hospital', function()
 {
     return View::make('profile-hospital');
 });
 
-Route::get('edit-profile-patient', function()
-{
-    return View::make('edit-profile-patient');
-});
-
 Route::get('edit-profile-hospital', function()
 {
     return View::make('edit-profile-hospital');
-});
-
-Route::get('users', function()
-{
-    return View::make('users');
-});
-
-Route::get('home', function()
-{
-    return View::make('home');
 });
