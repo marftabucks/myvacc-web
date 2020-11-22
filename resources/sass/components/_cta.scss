@@ -1,6 +1,7 @@
 .cta {
     @extend %utility;
 
+    height: max-content;
     border-radius: 1.5rem;
     border: 1px solid $color-black;
     padding: .8rem 2.4rem;
