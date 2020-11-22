@@ -1,0 +1,9 @@
+.profile-hospital{
+    padding: 7rem 15rem;
+    
+    &__subcontainer {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1.5rem;
+    }
+}
