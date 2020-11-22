@@ -24,6 +24,7 @@
                 </div>
                     
                 @endif
+                <h2>Navigation for dev.</h2>
                 <ul>
                     <li>
                         <a href="{{route('form')}}">Fill form</a>
