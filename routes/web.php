@@ -45,63 +45,63 @@ Route::get('register', function()
 
 Route::get('vaccination-form', function()
 {
-    return View::make('vaccination-form');
+    return View::make('user/vaccination-form');
 });
 
 Route::get('vaccination-ticket', function()
 {
-    return View::make('vaccination-ticket');
+    return View::make('user/vaccination-ticket');
 });
 
 Route::get('profile-patient', function()
 {
-    return View::make('profile-patient');
+    return View::make('user/profile-patient');
 });
 
 Route::get('edit-profile-patient', function()
 {
-    return View::make('edit-profile-patient');
+    return View::make('user/edit-profile-patient');
 });
 
 // PEMERINTAH
 Route::get('dashboard-pemerintah-patients', function()
 {
-    return View::make('dashboard-pemerintah-patients');
+    return View::make('pemerintah/dashboard-pemerintah-patients');
 });
 
 Route::get('dashboard-pemerintah-hospitals', function()
 {
-    return View::make('dashboard-pemerintah-hospitals');
+    return View::make('pemerintah/dashboard-pemerintah-hospitals');
 });
 
 Route::get('add-hospital', function()
 {
-    return View::make('add-hospital');
+    return View::make('pemerintah/add-hospital');
 });
 
 Route::get('edit-hospital', function()
 {
-    return View::make('edit-hospital');
+    return View::make('pemerintah/edit-hospital');
 });
 
 
 // RUMAH SAKIT
 Route::get('dashboard hospital-quota', function()
 {
-    return View::make('dashboard hospital-quota');
+    return View::make('rs/dashboard hospital-quota');
 });
 
 Route::get('dashboard hospital-patients', function()
 {
-    return View::make('dashboard hospital-patients');
+    return View::make('rs/dashboard hospital-patients');
 });
 
 Route::get('profile-hospital', function()
 {
-    return View::make('profile-hospital');
+    return View::make('rs/profile-hospital');
 });
 
 Route::get('edit-profile-hospital', function()
 {
-    return View::make('edit-profile-hospital');
+    return View::make('rs/edit-profile-hospital');
 });
