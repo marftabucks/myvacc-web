@@ -89,12 +89,20 @@ Route::get('edit-hospital', function()
 // RUMAH SAKIT
 Route::get('dashboard hospital-quota', function()
 {
+<<<<<<< HEAD
     return View::make('rs/dashboard-hospital-quota');
+=======
+    return View::make('rs/dashboard hospital-quota');
+>>>>>>> dcb50f93b253d1fd82bc87679ab64d004afe10c5
 });
 
 Route::get('dashboard hospital-patients', function()
 {
+<<<<<<< HEAD
     return View::make('rs/dashboard-hospital-patients');
+=======
+    return View::make('rs/dashboard hospital-patients');
+>>>>>>> dcb50f93b253d1fd82bc87679ab64d004afe10c5
 });
 
 Route::get('profile-hospital', function()

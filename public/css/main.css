@@ -229,6 +229,7 @@ h3 {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+  box-shadow: 1px 1px 4px #a5a5a594;
 }
 
 .cta:hover {
@@ -247,18 +248,22 @@ h3 {
   border-color: #858586;
 }
 
+.cta--red {
+  color: white !important;
+  background-color: #db2f2f !important;
+  border: 0;
+}
+
 .cta--primary {
   color: white !important;
   background-color: #092c4d !important;
   border: 0;
-  box-shadow: 1px 1px 4px #a5a5a594;
 }
 
 .cta--secondary {
   color: white !important;
   background-color: #3ebb6a !important;
   border: 0;
-  box-shadow: 1px 1px 4px #a5a5a594;
 }
 
 .card {
@@ -572,5 +577,13 @@ input[type=date]::-webkit-calendar-picker-indicator {
   display: flex;
   flex-direction: column;
   margin-bottom: 1.5rem;
+}
+
+.add-hospital {
+  padding: 7rem 15rem;
+}
+
+.edit-hospital {
+  padding: 7rem 15rem;
 }
 
