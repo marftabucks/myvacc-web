@@ -562,11 +562,13 @@ input[type=date]::-webkit-calendar-picker-indicator {
   padding: 7rem 15rem;
 }
 
-.vaccination-ticket {
+.vaccination-ticket,
+.vaccination-form {
   padding: 7rem 15rem;
 }
 
-.vaccination-ticket__subcontainer {
+.vaccination-ticket__subcontainer,
+.vaccination-form__subcontainer {
   display: flex;
   flex-direction: column;
   margin-bottom: 1.5rem;

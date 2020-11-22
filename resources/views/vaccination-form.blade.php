@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-<div class="vaccination-ticket">
+<div class="vaccination-form">
     <div class="container container--left container--xl">
         <h2 class="heading-2 margin-bottom-xs align-self-center">Vaccination Form</h1>
         <p class="status status--success margin-bottom-xl">Your account is verified</p>

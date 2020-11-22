@@ -25,24 +25,28 @@
             <div class="card card--m card--borderless">
                 <img src="{{ asset('assets/fact-1.jpg') }}" alt="" class="card__image card__image--m">
                 <div class="card__content">
+                    <h3 class="heading-3 margin-bottom-s">Gejala</h3>
                     <p class="text-regular">Virus COVID-19 adalah virus yang menyerang jaringan pernapasan manusia, sehingga membuat penderitanya mengalami gejala kesulitan bernafas yang diawali dengan demam tinggi.</p>
                 </div>
             </div>
             <div class="card card--m card--borderless">
                 <img src="{{ asset('assets/fact-2.jpg') }}" alt="" class="card__image card__image--m">
                 <div class="card__content">
+                    <h3 class="heading-3 margin-bottom-s">Penyebaran</h3>
                     <p class="text-regular">Virus COVID-19 menyebar dari orang ke orang melalui kontak langsung, terutama melalui droplet karena bersin, batuk, atau berinteraksi dengan orang dalam jarak dekat.</p>
                 </div>
             </div>
             <div class="card card--m card--borderless">
                 <img src="{{ asset('assets/fact-3.jpg') }}" alt="" class="card__image card__image--m">
                 <div class="card__content">
+                    <h3 class="heading-3 margin-bottom-s">Periode Infeksi</h3>
                     <p class="text-regular">Periode infeksi diperkirakan berlangsung selama delapan hingga 10 hari pada kasus sedang, dan rata-rata hingga dua minggu pada kasus yang parah.</p>
                 </div>
             </div>
             <div class="card card--m card--borderless">
                 <img src="{{ asset('assets/fact-4.jpg') }}" alt="" class="card__image card__image--m">
                 <div class="card__content">
+                    <h3 class="heading-3 margin-bottom-s">Sumber Awal</h3>
                     <p class="text-regular">Coronavirus bersirkulasi di antara hewan, dan beberapa menginfeksi manusia. Kelelawar dianggap sebagai salah satu inang alami dari virus-virus ini.</p>
                 </div>
             </div>
