@@ -57,7 +57,7 @@
             <div class="card card--l card--borderless">
                 <img src="{{ asset('assets/reason-1.jpg') }}" alt="" class="card__image card__image--l">
                 <div class="card__content">
-                    <h3 class="heading-3 margin-bottom-m">Melindungi orang-orang yang rentan</h3>
+                    <h3 class="heading-3 margin-bottom-m">Melindungi orang yang rentan</h3>
                     <p class="text-regular">Jika cukup banyak populasi yang divaksinasi, infeksi tidak dapat menyebar dari orang ke orang, yang berarti bahwa setiap orang memiliki tingkat perlindungan yang tinggi - bahkan bagi mereka yang tidak memiliki kekebalan yang baik.</p>
                 </div>
             </div>

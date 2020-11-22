@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <link rel="icon" href="{{ asset('assets/logo.png') }}">
+        <link rel="icon" href="{{ asset('assets/logo-circle.png') }}">
         <title>
             @yield('meta-title')
         </title>

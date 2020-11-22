@@ -422,7 +422,9 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 .logo-box {
-  width: 7rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 .select {
