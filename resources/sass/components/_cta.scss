@@ -5,6 +5,8 @@
     border: 1px solid $color-black;
     padding: .8rem 2.4rem;
     width: max-content;
+    box-shadow: 1px 1px 4px $color-box-shadow;
+
 
     &:hover {
         text-decoration: none;
@@ -22,17 +24,21 @@
         border-color: $color-grey;
     }
 
+    &--red {
+        color: $color-white !important;
+        background-color: $color-red !important;
+        border: 0;
+    }
+
     &--primary {
         color: $color-white !important;
         background-color: $color-primary !important;
         border: 0;
-        box-shadow: 1px 1px 4px $color-box-shadow;
     }
 
     &--secondary {
         color: $color-white !important;
         background-color: $color-secondary !important;
         border: 0;
-        box-shadow: 1px 1px 4px $color-box-shadow;
     }
 }

@@ -1,19 +1,19 @@
 @extends('layout')
 
-@section('content')
+@section('meta-title')
     My Vacc | Edit Hospital
 @endsection
 
 @section('content')
 <div class="edit-hospital">
     <div class="container container--left container--xl">
-        <h2 class="heading-2 margin-bottom-xs align-self-center">Edit Hospital</h1>
+        <h2 class="heading-2 margin-bottom-xl align-self-center">Edit Hospital</h1>
 
         <form action="" class="form">
 
             <div class="form__input">
                 <p class="text-regular">Hospital Name</p>
-                <input type="text" class="input" name="hospital_name" required>
+                <input type="text" class="input" name="hospital-name" required>
             </div>
 
             <div class="form__input">
@@ -47,9 +47,10 @@
                 <input type="text" class="input" name="address" required>
             </div>
             
-            <input type="reset" value="Delete" class="cta cta--secondary margin-bottom-xs">
-            <input type="submit" value="Save" class="cta cta--secondary margin-bottom-xs">
-            
+            <div class="form__input--horizontal">
+                <input type="submit" value="Delete" class="cta cta--red">
+                <input type="submit" value="Save" class="cta cta--secondary">
+            </div>
         </form>
     </div>
 </div>
