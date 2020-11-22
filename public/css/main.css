@@ -34,7 +34,7 @@ h1,
 h2,
 h3 {
   margin: 0;
-  color: #383838;
+  color: #092c4d;
 }
 
 .heading-1 {
@@ -45,6 +45,16 @@ h3 {
 .heading-2 {
   font-weight: 700;
   font-size: 2.5rem;
+}
+
+.heading-3 {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.text-large {
+  font-weight: 400;
+  font-size: 1.5rem;
 }
 
 .text-bold {
@@ -60,6 +70,18 @@ h3 {
 .text-small {
   font-weight: 400;
   font-size: 1.1rem;
+}
+
+.text-primary {
+  color: #092c4d;
+}
+
+.text-secondary {
+  color: #3ebb6a;
+}
+
+.text-white {
+  color: white;
 }
 
 .text-black {
@@ -165,8 +187,8 @@ h3 {
 }
 
 .media-m {
-  width: 20rem !important;
-  height: 20rem !important;
+  width: 40rem !important;
+  height: 40rem !important;
 }
 
 .media-left {
@@ -203,6 +225,20 @@ h3 {
   border-color: #858586;
 }
 
+.cta--primary {
+  color: white !important;
+  background-color: #092c4d !important;
+  border: 0;
+  box-shadow: 1px 1px 4px #a5a5a594;
+}
+
+.cta--secondary {
+  color: white !important;
+  background-color: #3ebb6a !important;
+  border: 0;
+  box-shadow: 1px 1px 4px #a5a5a594;
+}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -236,6 +272,7 @@ h3 {
   -o-object-fit: cover;
      object-fit: cover;
   margin-bottom: 2.5rem;
+  border-radius: 100%;
 }
 
 .card__image--m {
@@ -258,7 +295,7 @@ h3 {
 
 .container {
   padding: 8rem 3rem;
-  border: 1px solid #858586;
+  box-shadow: 3px 5px 1rem 1px #a5a5a594;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -317,17 +354,31 @@ input[type=file] {
   margin-left: .8rem;
 }
 
+.logo {
+  background-size: cover;
+  background-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 10rem !important;
+  border-radius: 100%;
+}
+
+.logo-box {
+  width: 7rem;
+}
+
 .header {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-  background: linear-gradient(90deg, #004f8e 0%, #00d4ff 100%);
+  background: #092c4d;
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 3.5rem 15rem;
+  padding: 0rem 15rem;
   z-index: 100;
+  box-shadow: 0 2px 2rem #a5a5a594;
 }
 
 .header > * {
@@ -369,12 +420,12 @@ input[type=file] {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-  background: linear-gradient(90deg, #004f8e 0%, #00d4ff 100%);
+  background: #092c4d;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-content: center;
   align-items: center;
-  padding: 5rem 15rem;
+  padding: 2rem 15rem;
 }
 
 .footer > * {
