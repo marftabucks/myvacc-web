@@ -3,6 +3,7 @@
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DashboardUserController;
+use App\Http\Controllers\FormController;
 use Illuminate\Routing\RouteDependencyResolverTrait;
 use Illuminate\Support\Facades\Route;
 use Illuminate\HTTP\Request;
@@ -39,6 +40,9 @@ Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'authenticate']);
 
 Route::get('/dashboard-user', [DashboardUserController::class, 'index'])->name('dashboard-user');
+
+Route::get('/form', [FormController::class, 'index'])->name('form');
+Route::post('/form', [FormController::class, 'store']);
 
 Route::get('vaccination-form', function()
 {

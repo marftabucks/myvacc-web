@@ -20,6 +20,11 @@
                     <a href="{{route('login')}}" class="cta cta--large cta--secondary margin-bottom-xs">Log In</a>
                     <p class="text-small">Don't have an account? <a href="{{route('register')}}" class="link text-small">Register now</a></p>
                 @endif
+                <ul>
+                    <li>
+                        <a href="{{route('form')}}">Fill form</a>
+                    </li>
+                </ul>
 
             </div>
             
