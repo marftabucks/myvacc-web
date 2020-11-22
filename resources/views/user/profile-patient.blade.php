@@ -7,7 +7,7 @@
 @section('content')
 <div class="profile-patient">
     <div class="container container--left container--xl">
-        <h2 class="heading-2 margin-bottom-xs align-self-center">Profile Patient</h1>
+        <h2 class="heading-2 margin-bottom-xs align-self-center">Patient Profile</h1>
         <p class="status status--success margin-bottom-xl">Your account is verified</p>
 
         <!-- <p class="status status--alert margin-bottom-xl">Your account is not verified</p> -->

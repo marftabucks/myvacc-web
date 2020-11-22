@@ -657,11 +657,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   padding: 7rem 15rem;
 }
 
-.edit-hospital {
-  padding: 7rem 15rem;
-}
-
-.edit-profile-hospital {
+.edit {
   padding: 7rem 15rem;
 }
 
@@ -682,10 +678,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 .dashboard {
-  padding: 7rem 15rem;
-}
-
-.add-profile-patient {
   padding: 7rem 15rem;
 }
 

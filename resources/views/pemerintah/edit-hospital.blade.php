@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-<div class="edit-hospital">
+<div class="edit">
     <div class="container container--left container--xl">
         <h2 class="heading-2 margin-bottom-xl align-self-center">Edit Hospital</h1>
 

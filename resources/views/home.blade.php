@@ -12,8 +12,13 @@
             <div class="media__content">
                 <h1 class="heading-1 margin-bottom-s">MyVacc</h1>
                 <p class="text-regular margin-bottom-m">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nostrum id quos magnam facilis obcaecati earum possimus consectetur, quis laboriosam quibusdam, officia deserunt deleniti illo.</p>
-                <a href="{{route('login')}}" class="cta cta--secondary margin-bottom-xs">Log In</a>
+                
+                <a href="{{route('login')}}" class="cta cta--large cta--secondary margin-bottom-xs">Log In</a>
                 <p class="text-small">Don't have an account? <a href="{{route('register')}}" class="link text-small">Register now</a></p>
+
+                <!-- Show this if user is logged in -->
+                <!-- <a href="/vaccination-form" class="cta cta--large cta--secondary margin-bottom-xs">Register Vaccination</a> -->
+
             </div>
             <a href="{{route('dashboard-user')}}" class="cta cta--secondary margin-bottom-xs">Dashboard User</a>
         </div>
@@ -83,6 +88,10 @@
         </div>
 
         <a href="{{route('register')}}" class="cta cta--large cta--secondary">Register Now</a>
+
+        <!-- Show this if user is logged in -->
+        <!-- <a href="/vaccination-form" class="cta large cta--large cta--secondary">Register Vaccination</a> -->
+
     </section>
 </div>
 @endsection

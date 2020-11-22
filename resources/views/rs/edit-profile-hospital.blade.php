@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-<div class="edit-hospital">
+<div class="edit">
     <div class="container container--left container--xl">
         <h2 class="heading-2 margin-bottom-xl align-self-center">Edit Profile</h1>
 
@@ -18,7 +18,7 @@
 
             <div class="form__input">
                 <p class="text-regular">Daily Quota</p>
-                <input type="text" class="input" name="quota" required>
+                <input type="text" class="input" name="quota" placeholder="250" required>
             </div>
 
             <div class="form__input">
