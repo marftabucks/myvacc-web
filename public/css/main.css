@@ -6,7 +6,7 @@
   display: inline-block;
   letter-spacing: 1px;
   line-height: normal !important;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   -webkit-appearance: none;
 }
 
@@ -223,6 +223,9 @@ h3 {
 }
 
 .cta {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
   border-radius: 1.5rem;
   border: 1px solid #383838;
   padding: .8rem 2.4rem;
@@ -438,7 +441,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   position: relative;
   padding: .5rem 1rem;
   cursor: pointer;
-  color: #858586;
+  color: #383838;
   border: 1px solid #858586;
   background-image: linear-gradient(45deg, transparent 50%, gray 50%), linear-gradient(135deg, gray 50%, transparent 50%), linear-gradient(to right, #ccc, #ccc);
   background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em;
@@ -585,5 +588,25 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .edit-hospital {
   padding: 7rem 15rem;
+}
+
+.edit-profile-hospital {
+  padding: 7rem 15rem;
+}
+
+.profile-hospital {
+  padding: 7rem 15rem;
+}
+
+.profile-hospital__flex-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile-hospital__subcontainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
 }
 
