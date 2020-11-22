@@ -12,9 +12,10 @@
             <div class="media__content">
                 <h1 class="heading-1 margin-bottom-s">MyVacc</h1>
                 <p class="text-regular margin-bottom-m">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nostrum id quos magnam facilis obcaecati earum possimus consectetur, quis laboriosam quibusdam, officia deserunt deleniti illo.</p>
-                <a href="/login" class="cta cta--secondary margin-bottom-xs">Log In</a>
-                <p class="text-small">Don't have an account? <a href="/register" class="link text-small">Register now</a></p>
+                <a href="{{route('login')}}" class="cta cta--secondary margin-bottom-xs">Log In</a>
+                <p class="text-small">Don't have an account? <a href="{{route('register')}}" class="link text-small">Register now</a></p>
             </div>
+            <a href="{{route('dashboard-user')}}" class="cta cta--secondary margin-bottom-xs">Dashboard User</a>
         </div>
     </section>
 
@@ -81,7 +82,7 @@
             </div>
         </div>
 
-        <a href="/register" class="cta cta--large cta--secondary">Register Now</a>
+        <a href="{{route('register')}}" class="cta cta--large cta--secondary">Register Now</a>
     </section>
 </div>
 @endsection

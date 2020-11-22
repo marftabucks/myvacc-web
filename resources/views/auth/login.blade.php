@@ -8,9 +8,8 @@
 <div class="login">
     <div class="container container--m">
         <h2 class="heading-2 margin-bottom-l">Log In</h1>
-
-        <form action="" class="form">
-
+        <form action="{{route('login')}}" method="POST" class="form">
+            @csrf
             <div class="form__input">
                 <p class="text-regular">E-mail</p>
                 <input type="e-mail" class="input" name="email" required>

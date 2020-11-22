@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\DashboardUserController;
 use Illuminate\Routing\RouteDependencyResolverTrait;
 use Illuminate\Support\Facades\Route;
 use Illuminate\HTTP\Request;
@@ -30,20 +32,14 @@ Route::get('users', function()
 });
 
 // AUTH
-Route::get('login', function()
-{
-    return View::make('auth/login');
-});
-
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
 Route::post('/register', [RegisterController::class, 'store']);
 
-// USER
-// Route::get('/dashboard-user', [DashboardUserController::class, 'index'])->name('dashboard-user');
-Route::get('dasboard-user', function()
-{
-    return View::make('user/dashboard-user');
-});
+Route::get('/login', [LoginController::class, 'index'])->name('login');
+Route::post('/login', [LoginController::class, 'authenticate']);
+
+Route::get('/dashboard-user', [DashboardUserController::class, 'index'])->name('dashboard-user');
+
 Route::get('vaccination-form', function()
 {
     return View::make('user/vaccination-form');
