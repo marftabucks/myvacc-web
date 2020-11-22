@@ -16,8 +16,9 @@
                 <a href="{{route('login')}}" class="cta cta--large cta--secondary margin-bottom-xs">Log In</a>
                 <p class="text-small">Don't have an account? <a href="{{route('register')}}" class="link text-small">Register now</a></p>
 
-                <!-- Show this if user is logged in -->
-                <!-- <a href="/vaccination-form" class="cta cta--large cta--secondary margin-bottom-xs">Register Vaccination</a> -->
+                @if (auth()->user())
+                    <a href="/vaccination-form" class="cta cta--large cta--secondary margin-bottom-xs">Register Vaccination</a>
+                @endif
 
             </div>
             <a href="{{route('dashboard-user')}}" class="cta cta--secondary margin-bottom-xs">Dashboard User</a>
