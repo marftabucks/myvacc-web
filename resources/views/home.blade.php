@@ -16,9 +16,13 @@
                 @if (auth()->user())
                     <a href="{{route('dashboard-user')}}" class="cta cta--large cta--secondary margin-bottom-xs">Dashboard User</a>
                     <a href="/vaccination-form" class="cta cta--large cta--secondary margin-bottom-xs">Register Vaccination</a>
-                @else  
-                    <a href="{{route('login')}}" class="cta cta--large cta--secondary margin-bottom-xs">Log In</a>
-                    <p class="text-small">Don't have an account? <a href="{{route('register')}}" class="link text-small">Register now</a></p>
+                @else 
+                <div class="flex">
+                    <a href="{{route('login')}}" class="cta cta--large cta--secondary margin-bottom-xs mr-3">Log In</a>
+                    <a href="{{route('register')}}" class="cta cta--large cta--secondary margin-bottom-xs">Register</a>
+                    {{-- <p class="text-small">Don't have an account? <a href="{{route('register')}}" class="link text-small">Register now</a></p> --}}
+                </div>
+                    
                 @endif
                 <ul>
                     <li>
