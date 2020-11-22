@@ -1,3 +1,7 @@
+.width-60 {
+    width: 60% !important;
+}
+
 .width-50 {
     width: 50% !important;
 }
@@ -6,9 +10,15 @@
     width: 40% !important;
 }
 
+.width-35 {
+    width: 35% !important;
+}
+
 .width-30 {
     width: 30% !important;
 }
+
+// Margin Bottom
 
 .margin-bottom-xs {
     margin-bottom: 1rem !important;
@@ -30,6 +40,22 @@
     margin-bottom: 5.5rem !important;
 }
 
+// Text Align
+
 .text-center {
     text-align: center !important;
+}
+
+// Align Self
+
+.align-self-center {
+    align-self: center !important;
+}
+
+.align-self-start {
+    align-self: flex-start !important;
+}
+
+.align-self-end {
+    align-self: flex-end !important;
 }

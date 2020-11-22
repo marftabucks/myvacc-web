@@ -13,12 +13,12 @@
 
             <div class="form__input">
                 <p class="text-regular">E-mail</p>
-                <input type="e-mail" class="input" name="email">
+                <input type="e-mail" class="input" name="email" required>
             </div>
 
             <div class="form__input">
                 <p class="text-regular">Password</p>
-                <input type="password" class="input" name="password">
+                <input type="password" class="input" name="password" required>
             </div>
             
             <input type="submit" value="Log in" class="cta cta--secondary margin-bottom-xs">

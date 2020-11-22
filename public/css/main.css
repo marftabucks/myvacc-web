@@ -1,5 +1,7 @@
 .cta,
-.input {
+.input,
+.select,
+.status {
   font-family: "Open Sans", sans-serif;
   display: inline-block;
   letter-spacing: 1px;
@@ -92,12 +94,20 @@ h3 {
   color: #858586;
 }
 
+.width-60 {
+  width: 60% !important;
+}
+
 .width-50 {
   width: 50% !important;
 }
 
 .width-40 {
   width: 40% !important;
+}
+
+.width-35 {
+  width: 35% !important;
 }
 
 .width-30 {
@@ -126,6 +136,18 @@ h3 {
 
 .text-center {
   text-align: center !important;
+}
+
+.align-self-center {
+  align-self: center !important;
+}
+
+.align-self-start {
+  align-self: flex-start !important;
+}
+
+.align-self-end {
+  align-self: flex-end !important;
 }
 
 .link:link,
@@ -302,9 +324,27 @@ h3 {
   justify-content: center;
 }
 
+.container--left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .container--m {
   width: 35%;
   border-radius: 3rem;
+}
+
+.container--l {
+  width: 40%;
+  border-radius: 3rem;
+  padding: 8rem 6rem;
+}
+
+.container--xl {
+  width: 40%;
+  border-radius: 3rem;
+  padding: 8rem 4rem;
 }
 
 .input {
@@ -321,6 +361,18 @@ h3 {
 
 input[type=file] {
   width: 100%;
+}
+
+input[type=date] {
+  background: #fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png) 97% 50% no-repeat;
+}
+
+input[type=date]::-webkit-inner-spin-button {
+  display: none;
+}
+
+input[type=date]::-webkit-calendar-picker-indicator {
+  opacity: 0;
 }
 
 .form {
@@ -354,6 +406,12 @@ input[type=file] {
   margin-left: .8rem;
 }
 
+.form__input--horizontal {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
 .logo {
   background-size: cover;
   background-position: center;
@@ -365,6 +423,50 @@ input[type=file] {
 
 .logo-box {
   width: 7rem;
+}
+
+.select {
+  border-radius: 1.2rem;
+  width: 100%;
+  position: relative;
+  padding: .5rem 1rem;
+  cursor: pointer;
+  color: #858586;
+  border: 1px solid #858586;
+  background-image: linear-gradient(45deg, transparent 50%, gray 50%), linear-gradient(135deg, gray 50%, transparent 50%), linear-gradient(to right, #ccc, #ccc);
+  background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em;
+  background-size: 5px 5px, 5px 5px, 1px 1.5em;
+  background-repeat: no-repeat;
+}
+
+.select:focus {
+  background-image: linear-gradient(45deg, #858586 50%, transparent 50%), linear-gradient(135deg, transparent 50%, #858586 50%), linear-gradient(to right, #ccc, #ccc);
+  background-position: calc(100% - 15px) 1em, calc(100% - 20px) 1em, calc(100% - 2.5em) 0.5em;
+  background-size: 5px 5px, 5px 5px, 1px 1.5em;
+  background-repeat: no-repeat;
+  border-color: #858586;
+  outline: 0;
+}
+
+.select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000;
+}
+
+.status {
+  align-self: center;
+  font-size: 1.1rem;
+  border-radius: 1.2rem;
+  padding: .3rem .8rem;
+  color: white;
+}
+
+.status--success {
+  background-color: #3ebb6a;
+}
+
+.status--alert {
+  background-color: #149708;
 }
 
 .header {
@@ -456,5 +558,15 @@ input[type=file] {
 .login,
 .register {
   padding: 7rem 15rem;
+}
+
+.vaccination-ticket {
+  padding: 7rem 15rem;
+}
+
+.vaccination-ticket__subcontainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
 }
 

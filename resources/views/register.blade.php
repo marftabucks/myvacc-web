@@ -13,22 +13,22 @@
 
             <div class="form__input">
                 <p class="text-regular">Full Name</p>
-                <input type="text" class="input" name="name">
+                <input type="text" class="input" name="name" required>
             </div>
 
             <div class="form__input">
                 <p class="text-regular">NIK</p>
-                <input type="text" class="input" name="nik">
+                <input type="text" class="input" name="nik" required>
             </div>
 
             <div class="form__input">
                 <p class="text-regular">E-mail</p>
-                <input type="e-mail" class="input" name="email">
+                <input type="e-mail" class="input" name="email" required>
             </div>
 
             <div class="form__input">
                 <p class="text-regular">Password</p>
-                <input type="password" class="input" name="password">
+                <input type="password" class="input" name="password" required>
             </div>
 
             <div class="form__input">

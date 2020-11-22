@@ -1,0 +1,17 @@
+.status {
+    @extend %utility;
+
+    align-self: center;
+    font-size: 1.1rem;
+    border-radius: 1.2rem;
+    padding: .3rem .8rem;
+    color: $color-white;
+
+    &--success {
+        background-color: $color-secondary;
+    }
+
+    &--alert {
+        background-color: $color-green;
+    }
+}

@@ -13,10 +13,13 @@
 @import 'components/input';
 @import 'components/form';
 @import 'components/logo';
+@import 'components/select';
+@import 'components/status';
 
 @import 'layouts/header';
 @import 'layouts/footer';
 @import 'layouts/home';
 
 @import 'pages/home';
-@import 'pages/login';
+@import 'pages/auth';
+@import 'pages/vaccination-ticket';
