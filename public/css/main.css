@@ -587,3 +587,17 @@ input[type=date]::-webkit-calendar-picker-indicator {
   padding: 7rem 15rem;
 }
 
+.edit-profile-hospital {
+  padding: 7rem 15rem;
+}
+
+.profile-hospital {
+  padding: 7rem 15rem;
+}
+
+.profile-hospital__subcontainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
