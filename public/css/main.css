@@ -610,3 +610,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   margin-bottom: 1.5rem;
 }
 
+.add-profile-patient {
+  padding: 7rem 15rem;
+}
+
