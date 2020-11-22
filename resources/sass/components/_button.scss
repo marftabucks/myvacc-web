@@ -1,0 +1,33 @@
+.button {
+    @extend %utility;
+
+    width: max-content;
+    padding: .4rem 1rem;
+    border-radius: 1.2rem;
+    background-color: $color-primary;
+    color: $color-white;
+    border: 0;
+    box-shadow: 1px 1px 4px $color-box-shadow;
+
+
+    &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        text-decoration: none;
+        color: $color-white;
+    }
+
+    &--green {
+        background-color: $color-secondary;
+
+        &:disabled {
+            background-color: $color-secondary--disabled;
+        }
+    }
+
+    &--yellow {
+        background-color: $color-yellow;
+    }
+}

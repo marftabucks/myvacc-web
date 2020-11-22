@@ -1,7 +1,9 @@
 .cta,
 .input,
 .select,
-.status {
+.status,
+.tab-link,
+.button {
   font-family: "Open Sans", sans-serif;
   display: inline-block;
   letter-spacing: 1px;
@@ -479,6 +481,75 @@ input[type=date]::-webkit-calendar-picker-indicator {
   background-color: #149708;
 }
 
+.tab {
+  width: 100%;
+  border-bottom: 1px solid #092c4d;
+}
+
+.tab > *:not(:first-child) {
+  transform: translateX(-2px);
+}
+
+.tab-link {
+  color: #092c4d;
+  background-color: white;
+  cursor: pointer;
+  padding: .8rem 1.6rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  border: 1px solid #092c4d;
+  border-bottom: 0;
+  transition: all .2s;
+}
+
+.tab-link:hover {
+  text-decoration: none;
+  color: #092c4d;
+  background-color: #ebebeb;
+}
+
+.tab-link.active {
+  color: white;
+  background-color: #092c4d;
+}
+
+.tab-link.active:hover {
+  background-color: #0b3761;
+}
+
+.button {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: .4rem 1rem;
+  border-radius: 1.2rem;
+  background-color: #092c4d;
+  color: white;
+  border: 0;
+  box-shadow: 1px 1px 4px #a5a5a594;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.button--green {
+  background-color: #3ebb6a;
+}
+
+.button--green:disabled {
+  background-color: #c3d4c9;
+}
+
+.button--yellow {
+  background-color: #f1ba06;
+}
+
 .header {
   height: -webkit-max-content;
   height: -moz-max-content;
@@ -608,5 +679,9 @@ input[type=date]::-webkit-calendar-picker-indicator {
   display: flex;
   flex-direction: column;
   margin-bottom: 1.5rem;
+}
+
+.dashboard {
+  padding: 7rem 15rem;
 }
 
