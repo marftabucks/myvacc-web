@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\RegisterController;
+use Illuminate\Routing\RouteDependencyResolverTrait;
 use Illuminate\Support\Facades\Route;
+use Illuminate\HTTP\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,8 +15,6 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-
 Route::get('/', function () {
     return view('home');
 });
@@ -29,20 +30,20 @@ Route::get('users', function()
 });
 
 // AUTH
-
 Route::get('login', function()
 {
     return View::make('auth/login');
 });
 
-Route::get('register', function()
-{
-    return View::make('auth/register');
-});
-
+Route::get('/register', [RegisterController::class, 'index'])->name('register');
+Route::post('/register', [RegisterController::class, 'store']);
 
 // USER
-
+// Route::get('/dashboard-user', [DashboardUserController::class, 'index'])->name('dashboard-user');
+Route::get('dasboard-user', function()
+{
+    return View::make('user/dashboard-user');
+});
 Route::get('vaccination-form', function()
 {
     return View::make('user/vaccination-form');
@@ -88,12 +89,12 @@ Route::get('edit-hospital', function()
 // RUMAH SAKIT
 Route::get('dashboard hospital-quota', function()
 {
-    return View::make('rs/dashboard hospital-quota');
+    return View::make('rs/dashboard-hospital-quota');
 });
 
 Route::get('dashboard hospital-patients', function()
 {
-    return View::make('rs/dashboard hospital-patients');
+    return View::make('rs/dashboard-hospital-patients');
 });
 
 Route::get('profile-hospital', function()
