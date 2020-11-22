@@ -36,7 +36,7 @@
                 <input type="file" name="selfie" id="selfie">
             </div>
             
-            <input type="submit" value="Register" class="cta cta--white margin-bottom-xs">
+            <input type="submit" value="Register" class="cta cta--secondary margin-bottom-xs">
             <p class="text-small">Already have an account? <a href="#" class="link text-small">Log in</a></p>
         </form>
     </div>

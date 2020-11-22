@@ -1,0 +1,11 @@
+.logo {
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    width: 10rem !important;
+    border-radius: 100%;
+
+    &-box {
+        width: 7rem;
+    }
+}

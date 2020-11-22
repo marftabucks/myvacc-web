@@ -1,3 +1,5 @@
+// Headings
+
 .heading-1 {
     font-weight: 700;
     font-size: 3rem;
@@ -6,6 +8,18 @@
 .heading-2 {
     font-weight: 700;
     font-size: 2.5rem;
+}
+
+.heading-3 {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+// Regular Text
+
+.text-large {
+    font-weight: 400;
+    font-size: 1.5rem;
 }
 
 .text-bold {
@@ -21,6 +35,20 @@
 .text-small {
     font-weight: 400;
     font-size: 1.1rem;
+}
+
+// Text colors
+
+.text-primary {
+    color: $color-primary;
+}
+
+.text-secondary {
+    color: $color-secondary;
+}
+
+.text-white {
+    color: $color-white;
 }
 
 .text-black {

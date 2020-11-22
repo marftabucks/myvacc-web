@@ -15,10 +15,24 @@
         padding: 1rem 3rem;
         font-size: 1.5rem;
     }
-}
 
-.cta--white {
-    color: $color-black !important;
-    background-color: $color-white !important;
-    border-color: $color-grey;
+    &--white {
+        color: $color-black !important;
+        background-color: $color-white !important;
+        border-color: $color-grey;
+    }
+
+    &--primary {
+        color: $color-white !important;
+        background-color: $color-primary !important;
+        border: 0;
+        box-shadow: 1px 1px 4px $color-box-shadow;
+    }
+
+    &--secondary {
+        color: $color-white !important;
+        background-color: $color-secondary !important;
+        border: 0;
+        box-shadow: 1px 1px 4px $color-box-shadow;
+    }
 }

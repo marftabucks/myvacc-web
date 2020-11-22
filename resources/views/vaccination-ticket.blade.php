@@ -2,4 +2,4 @@
 
 @section('content')
     Vaccination TICKET
-@stop
+@endsection

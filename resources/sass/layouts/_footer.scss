@@ -2,14 +2,14 @@
     height: max-content;
 
     // border-top: 1px solid $color-grey;
-    background: linear-gradient(90deg, rgba(0,79,142,1) 0%, rgba(0,212,255,1) 100%);
+    background: $color-primary;
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 
     justify-content: center;
     align-items: center;
-    padding: 5rem 15rem;
+    padding: 2rem 15rem;
 
     & > * {
         height: 100%;

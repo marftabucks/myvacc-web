@@ -21,7 +21,7 @@
                 <input type="password" class="input" name="password">
             </div>
             
-            <input type="submit" value="Log in" class="cta cta--white margin-bottom-xs">
+            <input type="submit" value="Log in" class="cta cta--secondary margin-bottom-xs">
             <p class="text-small">Don't have an account? <a href="/register" class="link text-small">Register now</a></p>
         </form>
     </div>

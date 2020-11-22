@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+        <link rel="icon" href="{{ asset('assets/logo.png') }}">
         <title>
             @yield('meta-title')
         </title>
@@ -25,8 +26,7 @@
         <nav class="header">
             <div class="header__link-box">
                 <a href="/home" class="logo-box">
-                    <!-- <img src="" alt="" class="logo"> -->
-                    <p class="text-bold text-white text-uppercase">MyVacc</p>
+                    <img src="{{ asset('assets/logo.png') }}" alt="" class="logo">
                 </a>
                 <a href="/home" class="link-item"><p class="text-bold text-white">Home</p></a>
                 <a href="#" class="link-item"><p class="text-bold text-white">Contact Us</p></a>
@@ -40,8 +40,7 @@
 
         <footer class="footer">
             <div class="logo-box">
-                <!-- <img src="" alt="" class="logo"> -->
-                <p class="text-bold text-white text-uppercase">MyVacc</p>
+                <img src="{{ asset('assets/logo.png') }}" alt="" class="logo">
             </div>
             <div class="header__link-box">
                 <a href="#" class="link-item"><p class="text-regular text-white">Home</p></a>
