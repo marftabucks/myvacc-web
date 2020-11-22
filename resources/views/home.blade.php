@@ -41,7 +41,7 @@
                 </div>
             </div>
             <div class="card card--m card--borderless">
-                <img src="https://via.placeholder.com/150" alt="" class="card__image card__image--m">
+                <img src="{{ asset('assets/fact-4.jpg') }}" alt="" class="card__image card__image--m">
                 <div class="card__content">
                     <p class="text-regular">Coronavirus bersirkulasi di antara hewan, dan beberapa menginfeksi manusia. Kelelawar dianggap sebagai salah satu inang alami dari virus-virus ini.</p>
                 </div>
