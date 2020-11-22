@@ -9,8 +9,8 @@
     <div class="container container--m">
         <h2 class="heading-2 margin-bottom-l">Register</h1>
 
-        <form action="" class="form">
-
+        <form action="{{route('register')}}" method="post" class="form">
+            @csrf
             <div class="form__input">
                 <p class="text-regular">Full Name</p>
                 <input type="text" class="input" name="name" required>
