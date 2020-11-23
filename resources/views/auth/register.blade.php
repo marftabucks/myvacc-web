@@ -37,7 +37,7 @@
             </div>
             
             <input type="submit" value="Register" class="cta cta--secondary margin-bottom-xs">
-            <p class="text-small">Already have an account? <a href="#" class="link text-small">Log in</a></p>
+            <p class="text-small">Already have an account? <a href="/login" class="link text-small">Log in</a></p>
         </form>
     </div>
 </div>

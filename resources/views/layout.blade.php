@@ -40,7 +40,9 @@
 
         <footer class="footer">
             <div class="logo-box">
-                <img src="{{ asset('assets/logo.png') }}" alt="" class="logo">
+                <a href="/home" class="logo-box">
+                    <img src="{{ asset('assets/logo.png') }}" alt="" class="logo">
+                </a>
             </div>
             <div class="header__link-box">
                 <a href="/home" class="link-item"><p class="text-regular text-white">Home</p></a>
