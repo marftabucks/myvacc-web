@@ -15,7 +15,9 @@ class Form extends Model
      * @var array
      */
     protected $fillable = [
+        'id_user',
         'name',
+        'id_rs',
         'hospital',
         'province',
         'city',
