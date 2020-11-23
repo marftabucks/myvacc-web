@@ -44,8 +44,8 @@
 
                         <!-- Show this if patient is logged in -->
                         <div class="dropdown-section">
-                            <a href="/vaccination-form" class="dropdown-option">Vaccination Form</a>
-                            <a href="/vaccination-ticket" class="dropdown-option">Vaccination Ticket</a>
+                            <a href="/form" class="dropdown-option">Vaccination Form</a>
+                            <a href="/vacc-ticket" class="dropdown-option">Vaccination Ticket</a>
                         </div>
                         <div class="dropdown-section">
                             <a href="/profile-patient" class="dropdown-option">My Profile</a>
@@ -63,7 +63,7 @@
 
                         <!-- Show this if pemerintah is logged in -->
                         <!-- <div class="dropdown-section">
-                            <a href="/dashboard-pemerintah-hospitals" class="dropdown-option">Dashboard</a>
+                            <a href="/pemerintah-hospitals" class="dropdown-option">Dashboard</a>
                         </div>
                         <div class="dropdown-section">
                             <a href="/add-hospital" class="dropdown-option">Add Hospital</a>
