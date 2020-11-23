@@ -4,14 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
-use App\Models\Pasien;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 
-class RegisterController extends Controller
+class PemerintahRegisterController extends Controller
 {
     public function index(){
-        return view('auth.register');
+        return view('auth.pemerintah-register');
     }
     public function store(Request $request){
         // Storing data to database
@@ -19,20 +18,13 @@ class RegisterController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'role' => 'pemerintah'
         ]);
-        
 
         $credentials = $request->only('email', 'password');
 
         if (Auth::attempt($credentials)) {
-            Pasien::create([
-                'id' => Auth::id(),
-                'name' => $request->name,
-                'nik' => $request->nik,
-                'email' => $request->email,
-                'selfie' => $request->selfie,
-            ]);
-            return redirect()->intended('dashboard-user');
+            return redirect()->intended('pemerintah-patients');
         }
     }
 }

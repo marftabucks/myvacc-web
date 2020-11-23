@@ -21,9 +21,7 @@ class User extends Authenticatable
         'nik',
         'email',
         'password',
-        'selfie',
-        'verified',
-        'filled-form'
+        'role',
     ];
 
     /**

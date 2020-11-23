@@ -12,14 +12,6 @@ class FormController extends Controller
         return view('user.vaccination-form');
     }
     public function store(Request $request){
-        // echo(Auth::id());
-        // echo($request->nama);
-        // echo($request->hospital);
-        // echo($request->province);
-        // echo($request->city);
-        // echo($request->date);
-        // echo($request->time);
-        
         Form::create([
             'id_user' => Auth::id() ,
             'name' => $request->name,
