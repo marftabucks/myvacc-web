@@ -21,7 +21,7 @@
 
             <div class="form__input">
                 <p class="text-regular">Province</p>
-                <select name="province" id="province" class="select">
+                <select name="province" id="province" class="select" required>
                     <option value="" selected hidden>Select your province</option>
                     <option value="Province 1">Province 1</option>
                 </select>
@@ -29,7 +29,7 @@
 
             <div class="form__input">
                 <p class="text-regular">City / Regency</p>
-                <select name="city" id="city" class="select">
+                <select name="city" id="city" class="select" required>
                     <option value="" selected hidden>Select your city/regency</option>
                     <option value="City 1">City 1</option>
                     <option value="City 2">City 2</option>
@@ -39,7 +39,7 @@
 
             <div class="form__input">
                 <p class="text-regular">Hospital</p>
-                <select name="hospital" id="hospital" class="select">
+                <select name="hospital" id="hospital" class="select" required>
                     <option value="" selected hidden>Select your preferred hospital</option>
                     <option value="Hospital 1">Hospital 1</option>
                     <option value="Hospital 2">Hospital 2</option>
@@ -51,11 +51,11 @@
             <div class="form__input--horizontal">
                 <div class="form__input width-50">
                     <p class="text-regular">Date</p>
-                    <input type="date" name="date" id="date" class="input" min="" max="">
+                    <input type="date" name="date" id="date" class="input" min="" max="" required>
                 </div>
                 <div class="form__input width-45">
                     <p class="text-regular">Time</p>
-                    <select name="time" id="time" class="select">
+                    <select name="time" id="time" class="select" required>
                         <option value="" selected hidden>Select time</option>
                         <option value="8">08.00 - 09.00</option>
                         <option value="9">09.00 - 10.00</option>

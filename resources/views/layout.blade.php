@@ -71,7 +71,7 @@
                             <!-- Show this if pemerintah is logged in -->
 
                             <div class="dropdown-section">
-                                <a href="#" class="dropdown-option">Log Out</a>          
+                                <a href="logout" class="dropdown-option">Log Out</a>          
                             </div>
                         </div>
                     </div>

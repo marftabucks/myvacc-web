@@ -20,7 +20,6 @@ class RegisterController extends Controller
             'email' => $request->email,
             'password' => Hash::make($request->password),
             'selfie' => $request->selfie,
-            'role' => 'pasien'
         ]);
 
         $credentials = $request->only('email', 'password');

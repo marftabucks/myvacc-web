@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\DashboardUserController;
 use App\Http\Controllers\FormController;
 use App\Http\Controllers\VaccTicketController;
@@ -44,6 +45,8 @@ Route::post('/register', [RegisterController::class, 'store']);
 
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'authenticate']);
+
+Route::get('/logout', [LogoutController::class, 'index'])->name('logout');
 
 // USER
 Route::get('/dashboard-user', [DashboardUserController::class, 'index'])->name('dashboard-user');
