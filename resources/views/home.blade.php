@@ -11,7 +11,7 @@
             <img src="{{ asset('assets/banner.jpg') }}" alt="" class="media media-m media-left">
             <div class="media__content">
                 <h1 class="heading-1 margin-bottom-s">MyVacc</h1>
-                <p class="text-regular margin-bottom-m">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nostrum id quos magnam facilis obcaecati earum possimus consectetur, quis laboriosam quibusdam, officia deserunt deleniti illo.</p>
+                <p class="text-regular margin-bottom-l">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nostrum id quos magnam facilis obcaecati earum possimus consectetur, quis laboriosam quibusdam, officia deserunt deleniti illo.</p>
                 
                 @if (auth()->user())
                 <!-- Show this if user is logged in -->
@@ -103,7 +103,9 @@
             <!-- Show this if user is logged in -->
         @endif
 
-        
+        <!-- Show this if user is logged in -->
+        <!-- <a href="{{route('form')}}" class="cta large cta--large cta--secondary">Register Vaccination</a> -->
+        <!-- Show this if user is logged in -->
 
     </section>
 </div>

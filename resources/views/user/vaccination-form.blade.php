@@ -49,13 +49,18 @@
             </div>
 
             <div class="form__input--horizontal">
-                <div class="form__input width-60">
+                <div class="form__input width-50">
                     <p class="text-regular">Date</p>
                     <input type="date" name="date" id="date" class="input" min="" max="">
                 </div>
-                <div class="form__input width-35">
+                <div class="form__input width-45">
                     <p class="text-regular">Time</p>
-                    <input type="time" name="time" id="time" class="input">
+                    <select name="time" id="time" class="select">
+                        <option value="" selected hidden>Select time</option>
+                        <option value="8">08.00 - 09.00</option>
+                        <option value="9">09.00 - 10.00</option>
+                        <option value="10">10.00 - 11.00</option>
+                    </select>
                 </div>
             </div>
             

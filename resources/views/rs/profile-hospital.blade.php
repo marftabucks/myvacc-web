@@ -14,7 +14,7 @@
                 <p class="text-bold">Hospital Name</p>
                 <p class="text-regular">Rumah Sakit Cinta Kasih Yesus</p>
             </div>
-            <a href="/edit-profile-hospital" class="cta cta--white">Edit Profile</a>
+            <a href="{{route('rs-edit-profile')}}" class="cta cta--white">Edit Profile</a>
         </div>
         
         <div class="profile-hospital__subcontainer">

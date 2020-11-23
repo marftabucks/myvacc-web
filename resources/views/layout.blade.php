@@ -27,7 +27,7 @@
     <body>
         <nav class="header">
             <div class="header__link-box">
-                <a href="/home" class="logo-box">
+                <a href="{{route('home')}}" class="logo-box">
                     <img src="{{ asset('assets/logo.png') }}" alt="" class="logo">
                 </a>
                 <a href="{{route('home')}}" class="link-item"><p class="text-bold text-white">Home</p></a>
