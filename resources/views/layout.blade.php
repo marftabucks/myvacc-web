@@ -34,50 +34,53 @@
                 <a href="{{route('contact-us')}}" class="link-item"><p class="text-bold text-white">Contact Us</p></a>
             </div>
             <div class="header__util">
-                <!-- Show this if user is not logged in -->
-                <!-- <a href="/login" class="link-item"><p class="text-bold text-white">Login</p></a> -->
+                @if (auth()->user())
+                    <!-- Show this if user is logged in -->
+                    <div class="dropdown">
+                        <button class="dropdown-button"><p class="text-bold text-white">Hi, {{auth()->user()->name}}</p></a>
+                        <div class="dropdown-menu">
 
-                <!-- Show this if user is logged in -->
-                <div class="dropdown">
-                    <button class="dropdown-button"><p class="text-bold text-white">Hi, Nama</p></a>
-                    <div class="dropdown-menu">
+                            <!-- Show this if patient is logged in -->
+                            <div class="dropdown-section">
+                                <a href="{{route('form')}}" class="dropdown-option">Vaccination Form</a>
+                                <a href="{{route('vacc-ticket')}}" class="dropdown-option">Vaccination Ticket</a>
+                            </div>
+                            <div class="dropdown-section">
+                                <a href="{{route('profile-patient')}}" class="dropdown-option">My Profile</a>
+                            </div>
+                            <!-- Show this if patient is logged in -->
 
-                        <!-- Show this if patient is logged in -->
-                        <div class="dropdown-section">
-                            <a href="{{route('form')}}" class="dropdown-option">Vaccination Form</a>
-                            <a href="{{route('vacc-ticket')}}" class="dropdown-option">Vaccination Ticket</a>
-                        </div>
-                        <div class="dropdown-section">
-                            <a href="{{route('profile-patient')}}" class="dropdown-option">My Profile</a>
-                        </div>
-                        <!-- Show this if patient is logged in -->
+                            <!-- Show this if hospital is logged in -->
+                            <!-- <div class="dropdown-section">
+                                <a href="{{route('rs-quota')}}" class="dropdown-option">Quota</a>
+                                <a href="{{route('rs-patients')}}" class="dropdown-option">Patients</a>
+                            </div>
+                            <div class="dropdown-section">
+                                <a href="{{route('rs-profile')}}" class="dropdown-option">My Profile</a>
+                            </div> -->
+                            <!-- Show this if hospital is logged in -->
 
-                        <!-- Show this if hospital is logged in -->
-                        <!-- <div class="dropdown-section">
-                            <a href="{{route('rs-quota')}}" class="dropdown-option">Quota</a>
-                            <a href="{{route('rs-patients')}}" class="dropdown-option">Patients</a>
-                        </div>
-                        <div class="dropdown-section">
-                            <a href="{{route('rs-profile')}}" class="dropdown-option">My Profile</a>
-                        </div> -->
-                        <!-- Show this if hospital is logged in -->
+                            <!-- Show this if pemerintah is logged in -->
+                            <!-- <div class="dropdown-section">
+                                <a href="{{route('pemerintah-patients')}}" class="dropdown-option">Patients</a>
+                                <a href="{{route('pemerintah-hospitals')}}" class="dropdown-option">Hospitals</a>
+                            </div>
+                            <div class="dropdown-section">
+                                <a href="{{route('add-hospital')}}" class="dropdown-option">Add Hospital</a>
+                            </div> -->
+                            <!-- Show this if pemerintah is logged in -->
 
-                        <!-- Show this if pemerintah is logged in -->
-                        <!-- <div class="dropdown-section">
-                            <a href="{{route('pemerintah-patients')}}" class="dropdown-option">Patients</a>
-                            <a href="{{route('pemerintah-hospitals')}}" class="dropdown-option">Hospitals</a>
-                        </div>
-                        <div class="dropdown-section">
-                            <a href="{{route('add-hospital')}}" class="dropdown-option">Add Hospital</a>
-                        </div> -->
-                        <!-- Show this if pemerintah is logged in -->
-
-                        <div class="dropdown-section">
-                            <a href="#" class="dropdown-option">Log Out</a>          
+                            <div class="dropdown-section">
+                                <a href="#" class="dropdown-option">Log Out</a>          
+                            </div>
                         </div>
                     </div>
-                </div>
-                <!-- Show this is user is logged in -->
+                    <!-- Show this is user is logged in -->
+                @else
+                    <!-- Show this if user is not logged in -->
+                    <a href="/login" class="link-item"><p class="text-bold text-white">Login</p></a>
+                @endif
+                
             </div>
         </nav>
 

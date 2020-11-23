@@ -30,19 +30,13 @@ use Illuminate\HTTP\Request;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', function () {return view('home');});
 
 Route::get('home', function()
-{
-    return View::make('home');
-})->name('home');
+{return View::make('home');})->name('home');
 
 Route::get('contact-us', function()
-{
-    return View::make('contact-us');
-})->name('contact-us');
+{return View::make('contact-us');})->name('contact-us');
 
 // AUTH
 Route::get('/register', [RegisterController::class, 'index'])->name('register');

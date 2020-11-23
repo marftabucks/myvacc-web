@@ -19,12 +19,9 @@ class RegisterController extends Controller
             'nik' => $request->nik,
             'email' => $request->email,
             'password' => Hash::make($request->password),
-            'selfie' => $request->selfie
+            'selfie' => $request->selfie,
+            'role' => 'pasien'
         ]);
-
-        // auth()->attempt($request->only('email','password'));
-
-        // return redirect()->route('dashboard-user');
 
         $credentials = $request->only('email', 'password');
 
