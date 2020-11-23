@@ -221,10 +221,12 @@ h3 {
   -o-object-fit: cover;
      object-fit: cover;
   align-self: center !important;
+  border-radius: 100%;
 }
 
 .media-container {
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
@@ -766,5 +768,16 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .dashboard {
   padding: 7rem 15rem;
+}
+
+.contact-us {
+  padding: 7rem 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-us > h1 {
+  text-align: center !important;
 }
 

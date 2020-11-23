@@ -7,7 +7,7 @@
 @section('content')
 <div class="contact-us">
     <div class="media-container">
-        <img src="{{ asset('assets/logo.png') }}" alt="" class="media media-m media-left">
+        <img src="{{ asset('assets/contact.png') }}" alt="" class="media media-m media-left">
         <div class="media__content">
             <h1 class="heading-1 margin-bottom-s">Contact Us</h1>
             <p class="text-regular margin-bottom-m">Feel free to contact us anytime. We will get back to you as soon as possible!</p>
