@@ -29,7 +29,7 @@
                     <img src="{{ asset('assets/logo.png') }}" alt="" class="logo">
                 </a>
                 <a href="/home" class="link-item"><p class="text-bold text-white">Home</p></a>
-                <a href="#" class="link-item"><p class="text-bold text-white">Contact Us</p></a>
+                <a href="/contact-us" class="link-item"><p class="text-bold text-white">Contact Us</p></a>
             </div>
             <div class="header__util">
                 <a href="/login" class="link-item"><p class="text-bold text-white">Login</p></a>
@@ -43,8 +43,8 @@
                 <img src="{{ asset('assets/logo.png') }}" alt="" class="logo">
             </div>
             <div class="header__link-box">
-                <a href="#" class="link-item"><p class="text-regular text-white">Home</p></a>
-                <a href="#" class="link-item"><p class="text-regular text-white">Contact Us</p></a>
+                <a href="/home" class="link-item"><p class="text-regular text-white">Home</p></a>
+                <a href="/contact-us" class="link-item"><p class="text-regular text-white">Contact Us</p></a>
             </div>
             <div class="header__util">
                 <p class="text-regular text-white">&#169;2020-Form | All Rights Reserved</p>

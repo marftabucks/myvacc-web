@@ -32,6 +32,11 @@ Route::get('users', function()
     return View::make('users');
 });
 
+Route::get('contact-us', function()
+{
+    return View::make('contact-us');
+});
+
 // AUTH
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
 Route::post('/register', [RegisterController::class, 'store']);
