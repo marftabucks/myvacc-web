@@ -30,8 +30,8 @@
                 <a href="/home" class="logo-box">
                     <img src="{{ asset('assets/logo.png') }}" alt="" class="logo">
                 </a>
-                <a href="/home" class="link-item"><p class="text-bold text-white">Home</p></a>
-                <a href="/contact-us" class="link-item"><p class="text-bold text-white">Contact Us</p></a>
+                <a href="{{route('home')}}" class="link-item"><p class="text-bold text-white">Home</p></a>
+                <a href="{{route('contact-us')}}" class="link-item"><p class="text-bold text-white">Contact Us</p></a>
             </div>
             <div class="header__util">
                 <!-- Show this if user is not logged in -->
@@ -82,12 +82,12 @@
         @yield('content')
 
         <footer class="footer">
-            <a href="/" class="logo-box">
+            <a href="{{route('home')}}" class="logo-box">
                 <img src="{{ asset('assets/logo.png') }}" alt="" class="logo">
             </a>
             <div class="header__link-box">
-                <a href="/home" class="link-item"><p class="text-regular text-white">Home</p></a>
-                <a href="/contact-us" class="link-item"><p class="text-regular text-white">Contact Us</p></a>
+                <a href="{{route('home')}}" class="link-item"><p class="text-regular text-white">Home</p></a>
+                <a href="{{route('contact-us')}}" class="link-item"><p class="text-regular text-white">Contact Us</p></a>
             </div>
             <div class="header__util">
                 <p class="text-regular text-white">&#169;2020-Form | All Rights Reserved</p>
