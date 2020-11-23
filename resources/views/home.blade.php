@@ -91,21 +91,15 @@
             </div>
         </div>
 
-        @if (!auth()->user())
+        @if (auth()->user())
+            <!-- Show this if user is logged in -->
+            <a href="{{route('form')}}" class="cta large cta--large cta--secondary">Register Vaccination</a>
+            <!-- Show this if user is logged in -->
+        @else
             <!-- Show this if user is not logged in -->
             <a href="{{route('register')}}" class="cta cta--large cta--secondary">Register Now</a>
             <!-- Show this if user is not logged in -->
         @endif
-
-        @if (auth()->user())
-            <!-- Show this if user is logged in -->
-            <a href="/vaccination-form" class="cta large cta--large cta--secondary">Register Vaccination</a>
-            <!-- Show this if user is logged in -->
-        @endif
-
-        <!-- Show this if user is logged in -->
-        <!-- <a href="{{route('form')}}" class="cta large cta--large cta--secondary">Register Vaccination</a> -->
-        <!-- Show this if user is logged in -->
 
     </section>
 </div>

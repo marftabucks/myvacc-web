@@ -22,7 +22,7 @@
             
             <input type="submit" value="Log in" class="cta cta--secondary margin-bottom-xs">
             <p class="text-small">Don't have an account? <a href="/register" class="link text-small">Register now</a></p>
-            <p class="text-small mt-3 "><a href="{{route('admin-login')}}" class="link text-small">Login as Admin</a></p>
+            <p class="text-small mt-3 "><a href="{{route('pemerintah-login')}}" class="link text-small">Login as Pemerintah</a></p>
         </form>
         
     </div>

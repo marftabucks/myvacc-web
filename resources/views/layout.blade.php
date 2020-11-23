@@ -40,35 +40,46 @@
                         <button class="dropdown-button"><p class="text-bold text-white">Hi, {{auth()->user()->name}}</p></a>
                         <div class="dropdown-menu">
 
-                            <!-- Show this if patient is logged in -->
-                            <div class="dropdown-section">
-                                <a href="{{route('form')}}" class="dropdown-option">Vaccination Form</a>
-                                <a href="{{route('vacc-ticket')}}" class="dropdown-option">Vaccination Ticket</a>
-                            </div>
-                            <div class="dropdown-section">
-                                <a href="{{route('profile-patient')}}" class="dropdown-option">My Profile</a>
-                            </div>
-                            <!-- Show this if patient is logged in -->
+                            @switch(auth()->user()->role)
+                                @case('pasien')
+                                    <!-- Show this if patient is logged in -->
+                                    <div class="dropdown-section">
+                                        <a href="{{route('form')}}" class="dropdown-option">Vaccination Form</a>
+                                        <a href="{{route('vacc-ticket')}}" class="dropdown-option">Vaccination Ticket</a>
+                                    </div>
+                                    <div class="dropdown-section">
+                                        <a href="{{route('profile-patient')}}" class="dropdown-option">My Profile</a>
+                                    </div>
+                                    <!-- Show this if patient is logged in -->
+                                    @break
 
-                            <!-- Show this if hospital is logged in -->
-                            <!-- <div class="dropdown-section">
-                                <a href="{{route('rs-quota')}}" class="dropdown-option">Quota</a>
-                                <a href="{{route('rs-patients')}}" class="dropdown-option">Patients</a>
-                            </div>
-                            <div class="dropdown-section">
-                                <a href="{{route('rs-profile')}}" class="dropdown-option">My Profile</a>
-                            </div> -->
-                            <!-- Show this if hospital is logged in -->
+                                @case('pemerintah')
+                                    <!-- Show this if pemerintah is logged in -->
+                                    <div class="dropdown-section">
+                                        <a href="{{route('pemerintah-patients')}}" class="dropdown-option">Patients</a>
+                                        <a href="{{route('pemerintah-hospitals')}}" class="dropdown-option">Hospitals</a>
+                                    </div>
+                                    <div class="dropdown-section">
+                                        <a href="{{route('add-hospital')}}" class="dropdown-option">Add Hospital</a>
+                                    </div>
+                                    <!-- Show this if pemerintah is logged in -->
+                                    @break
 
-                            <!-- Show this if pemerintah is logged in -->
-                            <!-- <div class="dropdown-section">
-                                <a href="{{route('pemerintah-patients')}}" class="dropdown-option">Patients</a>
-                                <a href="{{route('pemerintah-hospitals')}}" class="dropdown-option">Hospitals</a>
-                            </div>
-                            <div class="dropdown-section">
-                                <a href="{{route('add-hospital')}}" class="dropdown-option">Add Hospital</a>
-                            </div> -->
-                            <!-- Show this if pemerintah is logged in -->
+                                @case('rs')
+                                    <!-- Show this if hospital is logged in -->
+                                    <div class="dropdown-section">
+                                        <a href="{{route('rs-quota')}}" class="dropdown-option">Quota</a>
+                                        <a href="{{route('rs-patients')}}" class="dropdown-option">Patients</a>
+                                    </div>
+                                    <div class="dropdown-section">
+                                        <a href="{{route('rs-profile')}}" class="dropdown-option">My Profile</a>
+                                    </div>
+                                    <!-- Show this if hospital is logged in -->
+                                    @break
+
+                                @default
+                                    <p>something is wrong!</p>
+                            @endswitch
 
                             <div class="dropdown-section">
                                 <a href="logout" class="dropdown-option">Log Out</a>          
