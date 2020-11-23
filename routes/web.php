@@ -37,17 +37,12 @@ Route::get('/', function () {
 Route::get('home', function()
 {
     return View::make('home');
-});
-
-Route::get('users', function()
-{
-    return View::make('users');
-});
+})->name('home');
 
 Route::get('contact-us', function()
 {
     return View::make('contact-us');
-});
+})->name('contact-us');
 
 // AUTH
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
