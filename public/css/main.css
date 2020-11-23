@@ -3,7 +3,8 @@
 .select,
 .status,
 .tab-link,
-.button {
+.button,
+.dropdown-option {
   font-family: "Open Sans", sans-serif;
   display: inline-block;
   letter-spacing: 1px;
@@ -550,6 +551,65 @@ input[type=date]::-webkit-calendar-picker-indicator {
   background-color: #f1ba06;
 }
 
+.dropdown {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.dropdown-button {
+  background-color: rgba(255, 255, 255, 0);
+  border: 0;
+  cursor: pointer;
+  position: relative;
+}
+
+.dropdown-button:focus {
+  outline: none;
+}
+
+.dropdown-menu {
+  position: absolute;
+  transform: translate(-65%, 5%);
+  opacity: 0;
+  display: none;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  border: 0;
+  cursor: initial;
+}
+
+.dropdown-menu.open {
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-menu > *:not(:last-child) {
+  border-bottom: 1px solid #f1f1f1e3;
+}
+
+.dropdown-section {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 0;
+}
+
+.dropdown-option {
+  color: #092c4d;
+  transition: all .2s;
+  padding: .8rem 1.6rem;
+  cursor: pointer;
+}
+
+.dropdown-option:hover {
+  background-color: #f1f1f1;
+  color: #092c4d;
+  text-decoration: none;
+}
+
 .header {
   height: -webkit-max-content;
   height: -moz-max-content;
@@ -661,17 +721,20 @@ input[type=date]::-webkit-calendar-picker-indicator {
   padding: 7rem 15rem;
 }
 
-.profile-hospital {
+.profile-hospital,
+.profile-patient {
   padding: 7rem 15rem;
 }
 
-.profile-hospital__flex-container {
+.profile-hospital__flex-container,
+.profile-patient__flex-container {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
 
-.profile-hospital__subcontainer {
+.profile-hospital__subcontainer,
+.profile-patient__subcontainer {
   display: flex;
   flex-direction: column;
   margin-bottom: 1.5rem;
@@ -679,21 +742,5 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .dashboard {
   padding: 7rem 15rem;
-}
-
-.profile-patient {
-  padding: 7rem 15rem;
-}
-
-.profile-patient__flex-container {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.profile-patient__subcontainer {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1.5rem;
 }
 

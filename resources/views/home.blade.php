@@ -14,15 +14,14 @@
                 <p class="text-regular margin-bottom-m">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nostrum id quos magnam facilis obcaecati earum possimus consectetur, quis laboriosam quibusdam, officia deserunt deleniti illo.</p>
                 
                 @if (auth()->user())
-                    <a href="{{route('dashboard-user')}}" class="cta cta--large cta--secondary margin-bottom-xs">Dashboard User</a>
+                <!-- Show this if user is logged in -->
                     <a href="{{route('form')}}" class="cta cta--large cta--secondary margin-bottom-xs">Register Vaccination</a>
+                <!-- Show this if user is logged in -->
                 @else 
-                <div class="flex">
+                <!-- Show this if user is not logged in -->
                     <a href="{{route('login')}}" class="cta cta--large cta--secondary margin-bottom-xs mr-3">Log In</a>
-                    <a href="{{route('register')}}" class="cta cta--large cta--secondary margin-bottom-xs">Register</a>
-                    {{-- <p class="text-small">Don't have an account? <a href="{{route('register')}}" class="link text-small">Register now</a></p> --}}
-                </div>
-                    
+                    <p class="text-small">Don't have an account? <a href="{{route('register')}}" class="link text-small">Register now</a></p>
+                <!-- Show this if user is not logged in -->
                 @endif
                 <div class="mt-5">
                     <h2 class="my-2">Navigation for dev.</h2>
@@ -124,7 +123,9 @@
         </div>
 
         @if (!auth()->user())
+            <!-- Show this if user is not logged in -->
             <a href="{{route('register')}}" class="cta cta--large cta--secondary">Register Now</a>
+            <!-- Show this if user is not logged in -->
         @else  
 
         @endif
@@ -132,6 +133,7 @@
 
         <!-- Show this if user is logged in -->
         <!-- <a href="/vaccination-form" class="cta large cta--large cta--secondary">Register Vaccination</a> -->
+        <!-- Show this if user is logged in -->
 
     </section>
 </div>
