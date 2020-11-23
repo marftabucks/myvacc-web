@@ -10,8 +10,8 @@
 
     <div class="tab">
         <a href="#" class="tab-link active">Daily Quota</a>
-        <a href="/dashboard-pemerintah-hospitals" class="tab-link">Patients</a>
-        <form action="">
+        <a href="{{route('rs-patients')}}" class="tab-link">Patients</a>
+        <form action="" class="width-20 margin-left-auto" style="display:inline-block">
             <select name="month" id="month" class="select">
                 <option value="" selected hidden>Select month</option>
                 <option value="">January</option>

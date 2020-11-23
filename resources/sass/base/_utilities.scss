@@ -6,6 +6,10 @@
     width: 50% !important;
 }
 
+.width-45 {
+    width: 45% !important;
+}
+
 .width-40 {
     width: 40% !important;
 }
@@ -16,6 +20,10 @@
 
 .width-30 {
     width: 30% !important;
+}
+
+.width-20 {
+    width: 20% !important;
 }
 
 // Margin Bottom
@@ -40,6 +48,12 @@
     margin-bottom: 5.5rem !important;
 }
 
+// Margin left
+
+.margin-left-auto {
+    margin-left: auto;
+}
+
 // Text Align
 
 .text-center {
@@ -58,4 +72,18 @@
 
 .align-self-end {
     align-self: flex-end !important;
+}
+
+// Justify Self
+
+.justify-self-center {
+    justify-self: center !important;
+}
+
+.justify-self-start {
+    justify-self: flex-start !important;
+}
+
+.justify-self-end {
+    justify-self: flex-end !important;
 }

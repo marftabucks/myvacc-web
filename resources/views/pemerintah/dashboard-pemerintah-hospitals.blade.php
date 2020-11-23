@@ -9,7 +9,7 @@
     <h1 class="heading-1 margin-bottom-xl">Dashboard</h1>
 
     <div class="tab">
-        <a href="/dashboard-pemerintah-patients" class="tab-link">Patients</a>
+        <a href="{{route('pemerintah-patients')}}" class="tab-link">Patients</a>
         <a href="#" class="tab-link active">Hospitals</a>
     </div>
 
@@ -30,7 +30,7 @@
                 <td>Special Region of Yogyakarta</td>
                 <td>Sleman Regency</td>
                 <td>Ringroad Street</td>
-                <td><a href="/edit-hospital" class="button button--green">Edit</a></td>
+                <td><a href="{{route('rs-edit-profile')}}" class="button button--green">Edit</a></td>
             </tr>
             @endfor
         </tbody>

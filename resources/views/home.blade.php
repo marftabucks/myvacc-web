@@ -100,7 +100,7 @@
 
 
         <!-- Show this if user is logged in -->
-        <!-- <a href="/vaccination-form" class="cta large cta--large cta--secondary">Register Vaccination</a> -->
+        <!-- <a href="{{route('form')}}" class="cta large cta--large cta--secondary">Register Vaccination</a> -->
         <!-- Show this if user is logged in -->
 
     </section>
