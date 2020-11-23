@@ -26,6 +26,7 @@
                 @endif
                 <div class="mt-5">
                     <h2 class="my-2">Navigation for dev.</h2>
+                    <h2>USER</h2>
                     <ul class="ml-3 pl-3">
                         <li>
                             <a href="{{route('form')}}">Fill form</a>
@@ -35,6 +36,22 @@
                         </li>
                         <li>
                             <a href="{{route('profile-patient')}}">Profile patient</a>
+                        </li>
+
+                    </ul>
+                    <h2>PEMERINTAH</h2>
+                    <ul class="ml-3 pl-3">
+                        <li>
+                            <a href="{{route('pemerintah-patients')}}">pemerintah-patients</a>
+                        </li>
+                        <li>
+                            <a href="{{route('pemerintah-hospitals')}}">pemerintah-hospitals</a>
+                        </li>
+                        <li>
+                            <a href="{{route('add-hospital')}}">add-hospital</a>
+                        </li>
+                        <li>
+                            <a href="{{route('edit-hospital')}}">edit-hospital</a>
                         </li>
                     </ul>
                 </div>
