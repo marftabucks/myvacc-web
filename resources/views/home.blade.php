@@ -54,6 +54,22 @@
                             <a href="{{route('edit-hospital')}}">edit-hospital</a>
                         </li>
                     </ul>
+
+                    <h2>RS</h2>
+                    <ul class="ml-3 pl-3">
+                        <li>
+                            <a href="{{route('rs-profile')}}">rs-profile</a>
+                        </li>
+                        <li>
+                            <a href="{{route('rs-edit-profile')}}">rs-edit-profile</a>
+                        </li>
+                        <li>
+                            <a href="{{route('rs-quota')}}">rs-quota</a>
+                        </li>
+                        <li>
+                            <a href="{{route('rs-patients')}}">rs-patients</a>
+                        </li>
+                    </ul>
                 </div>
                 
 

@@ -11,6 +11,11 @@ use App\Http\Controllers\PemerintahPatientController;
 use App\Http\Controllers\EditProfilePatientController;
 use App\Http\Controllers\PemerintahAddHospitalController;
 use App\Http\Controllers\PemerintahEditHospitalController;
+use App\Http\Controllers\RSProfileController;
+use App\Http\Controllers\RSEditProfileController;
+use App\Http\Controllers\RSQuotaController;
+use App\Http\Controllers\RSPatientsController;
+
 use Illuminate\Routing\RouteDependencyResolverTrait;
 use Illuminate\Support\Facades\Route;
 use Illuminate\HTTP\Request;
@@ -68,22 +73,7 @@ Route::get('/add-hospital', [PemerintahAddHospitalController::class, 'index'])->
 Route::get('/edit-hospital', [PemerintahEditHospitalController::class, 'index'])->name('edit-hospital');
 
 // RUMAH SAKIT
-Route::get('dashboard hospital-quota', function()
-{
-    return View::make('rs/dashboard-hospital-quota');
-});
-
-Route::get('dashboard hospital-patients', function()
-{
-    return View::make('rs/dashboard-hospital-patients');
-});
-
-Route::get('profile-hospital', function()
-{
-    return View::make('rs/profile-hospital');
-});
-
-Route::get('edit-profile-hospital', function()
-{
-    return View::make('rs/edit-profile-hospital');
-});
+Route::get('/rs-profile', [RSProfileController::class, 'index'])->name('rs-profile');
+Route::get('/rs-edit-profile', [RSEditProfileController::class, 'index'])->name('rs-edit-profile');
+Route::get('/rs-quota', [RSQuotaController::class, 'index'])->name('rs-quota');
+Route::get('/rs-patients', [RSPatientsController::class, 'index'])->name('rs-patients');
