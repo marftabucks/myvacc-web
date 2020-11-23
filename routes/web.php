@@ -4,6 +4,9 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DashboardUserController;
 use App\Http\Controllers\FormController;
+use App\Http\Controllers\VaccTicketController;
+use App\Http\Controllers\ProfilePatientController;
+use App\Http\Controllers\EditProfilePatientController;
 use Illuminate\Routing\RouteDependencyResolverTrait;
 use Illuminate\Support\Facades\Route;
 use Illuminate\HTTP\Request;
@@ -39,30 +42,15 @@ Route::post('/register', [RegisterController::class, 'store']);
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'authenticate']);
 
+// USER
 Route::get('/dashboard-user', [DashboardUserController::class, 'index'])->name('dashboard-user');
 
 Route::get('/form', [FormController::class, 'index'])->name('form');
 Route::post('/form', [FormController::class, 'store']);
 
-Route::get('vaccination-form', function()
-{
-    return View::make('user/vaccination-form');
-});
-
-Route::get('vaccination-ticket', function()
-{
-    return View::make('user/vaccination-ticket');
-});
-
-Route::get('profile-patient', function()
-{
-    return View::make('user/profile-patient');
-});
-
-Route::get('edit-profile-patient', function()
-{
-    return View::make('user/edit-profile-patient');
-});
+Route::get('/vacc-ticket', [VaccTicketController::class, 'index'])->name('vacc-ticket');
+Route::get('/profile-patient', [ProfilePatientController::class, 'index'])->name('profile-patient');
+Route::get('/edit-profile-patient', [EditProfilePatientController::class, 'index'])->name('edit-profile-patient');
 
 // PEMERINTAH
 Route::get('dashboard-pemerintah-patients', function()

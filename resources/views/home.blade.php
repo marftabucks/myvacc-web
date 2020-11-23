@@ -15,7 +15,7 @@
                 
                 @if (auth()->user())
                     <a href="{{route('dashboard-user')}}" class="cta cta--large cta--secondary margin-bottom-xs">Dashboard User</a>
-                    <a href="/vaccination-form" class="cta cta--large cta--secondary margin-bottom-xs">Register Vaccination</a>
+                    <a href="{{route('form')}}" class="cta cta--large cta--secondary margin-bottom-xs">Register Vaccination</a>
                 @else 
                 <div class="flex">
                     <a href="{{route('login')}}" class="cta cta--large cta--secondary margin-bottom-xs mr-3">Log In</a>
@@ -24,12 +24,21 @@
                 </div>
                     
                 @endif
-                <h2>Navigation for dev.</h2>
-                <ul>
-                    <li>
-                        <a href="{{route('form')}}">Fill form</a>
-                    </li>
-                </ul>
+                <div class="mt-5">
+                    <h2 class="my-2">Navigation for dev.</h2>
+                    <ul class="ml-3 pl-3">
+                        <li>
+                            <a href="{{route('form')}}">Fill form</a>
+                        </li>
+                        <li>
+                            <a href="{{route('vacc-ticket')}}">Vacc ticket</a>
+                        </li>
+                        <li>
+                            <a href="{{route('profile-patient')}}">Profile patient</a>
+                        </li>
+                    </ul>
+                </div>
+                
 
             </div>
             

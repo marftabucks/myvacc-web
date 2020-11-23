@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Form;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Auth;
 
 class FormController extends Controller
 {
@@ -13,10 +11,17 @@ class FormController extends Controller
         return view('user.vaccination-form');
     }
     public function store(Request $request){
-        dd($request);
+        dd("ok");
+        dd($request->nama);
+        dd($request->hospital);
+        dd($request->province);
+        dd($request->city);
+        dd($request->date);
+        dd($request->time);
+        
         // Form::create([
         //     'name' => $request->nama,
-        //     'hospital' => $request->id_rs,
+        //     'hospital' => $request->hospital,
         //     'province' => $request->province,
         //     'city' => $request->city,
         //     'date' => $request->date,
