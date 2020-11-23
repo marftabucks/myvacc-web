@@ -23,39 +23,7 @@
                     <p class="text-small">Don't have an account? <a href="{{route('register')}}" class="link text-small">Register now</a></p>
                 <!-- Show this if user is not logged in -->
                 @endif
-                <div class="mt-5">
-                    <h2 class="my-2">Navigation for dev.</h2>
-                    <a href="{{route('contact-us')}}">Contact us</a>
-                    <table style="width:100%">
-                        <tr>
-                          <th>User</th>
-                          <th>Pemerintah</th> 
-                          <th>RS</th>
-                        </tr>
-                        <tr>
-                            <td><a href="{{route('form')}}">Fill form</a></td>
-                            <td><a href="{{route('pemerintah-patients')}}">pemerintah-patients</a></td>
-                            <td><a href="{{route('rs-profile')}}">rs-profile</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="{{route('vacc-ticket')}}">Vacc ticket</a></td> 
-                            <td><a href="{{route('pemerintah-hospitals')}}">pemerintah-hospitals</a></td> 
-                            <td><a href="{{route('rs-edit-profile')}}">rs-edit-profile</a></td> 
-                        </tr>
-                        <tr>
-                            <td><a href="{{route('profile-patient')}}">Profile patient</a></td>
-                            <td><a href="{{route('add-hospital')}}">add-hospital</a></td>
-                            <td><a href="{{route('rs-quota')}}">rs-quota</a></td>
-                        </tr>
-                            <td></td>
-                            <td><a href="{{route('edit-hospital')}}">edit-hospital</a></td>
-                            <td><a href="{{route('rs-patients')}}">rs-patients</a></td>
-                        <tr>
-                </div>
-                
-
             </div>
-            
         </div>
     </section>
 
