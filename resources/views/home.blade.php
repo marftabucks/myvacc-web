@@ -24,7 +24,6 @@
                 <!-- Show this if user is not logged in -->
                 @endif
             </div>
-            
         </div>
     </section>
 
