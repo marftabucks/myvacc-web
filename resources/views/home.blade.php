@@ -23,8 +23,8 @@
                     <p class="text-small">Don't have an account? <a href="{{route('register')}}" class="link text-small">Register now</a></p>
                 <!-- Show this if user is not logged in -->
                 @endif
+
             </div>
-            
         </div>
     </section>
 
@@ -95,13 +95,16 @@
             <!-- Show this if user is not logged in -->
             <a href="{{route('register')}}" class="cta cta--large cta--secondary">Register Now</a>
             <!-- Show this if user is not logged in -->
-        @else  
-
         @endif
 
+        @if (auth()->user())
+            <!-- Show this if user is logged in -->
+            <a href="/vaccination-form" class="cta large cta--large cta--secondary">Register Vaccination</a>
+            <!-- Show this if user is logged in -->
+        @endif
 
         <!-- Show this if user is logged in -->
-        <!-- <a href="/vaccination-form" class="cta large cta--large cta--secondary">Register Vaccination</a> -->
+        <!-- <a href="{{route('form')}}" class="cta large cta--large cta--secondary">Register Vaccination</a> -->
         <!-- Show this if user is logged in -->
 
     </section>

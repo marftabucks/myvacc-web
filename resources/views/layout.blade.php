@@ -27,11 +27,11 @@
     <body>
         <nav class="header">
             <div class="header__link-box">
-                <a href="/home" class="logo-box">
+                <a href="{{route('home')}}" class="logo-box">
                     <img src="{{ asset('assets/logo.png') }}" alt="" class="logo">
                 </a>
-                <a href="/home" class="link-item"><p class="text-bold text-white">Home</p></a>
-                <a href="/contact-us" class="link-item"><p class="text-bold text-white">Contact Us</p></a>
+                <a href="{{route('home')}}" class="link-item"><p class="text-bold text-white">Home</p></a>
+                <a href="{{route('contact-us')}}" class="link-item"><p class="text-bold text-white">Contact Us</p></a>
             </div>
             <div class="header__util">
                 <!-- Show this if user is not logged in -->
@@ -44,29 +44,31 @@
 
                         <!-- Show this if patient is logged in -->
                         <div class="dropdown-section">
-                            <a href="/vaccination-form" class="dropdown-option">Vaccination Form</a>
-                            <a href="/vaccination-ticket" class="dropdown-option">Vaccination Ticket</a>
+                            <a href="{{route('form')}}" class="dropdown-option">Vaccination Form</a>
+                            <a href="{{route('vacc-ticket')}}" class="dropdown-option">Vaccination Ticket</a>
                         </div>
                         <div class="dropdown-section">
-                            <a href="/profile-patient" class="dropdown-option">My Profile</a>
+                            <a href="{{route('profile-patient')}}" class="dropdown-option">My Profile</a>
                         </div>
                         <!-- Show this if patient is logged in -->
 
                         <!-- Show this if hospital is logged in -->
                         <!-- <div class="dropdown-section">
-                            <a href="/dashboard-hospital-quota" class="dropdown-option">Dashboard</a>
+                            <a href="{{route('rs-quota')}}" class="dropdown-option">Quota</a>
+                            <a href="{{route('rs-patients')}}" class="dropdown-option">Patients</a>
                         </div>
                         <div class="dropdown-section">
-                            <a href="/profile-hospital" class="dropdown-option">My Profile</a>
+                            <a href="{{route('rs-profile')}}" class="dropdown-option">My Profile</a>
                         </div> -->
                         <!-- Show this if hospital is logged in -->
 
                         <!-- Show this if pemerintah is logged in -->
                         <!-- <div class="dropdown-section">
-                            <a href="/dashboard-pemerintah-hospitals" class="dropdown-option">Dashboard</a>
+                            <a href="{{route('pemerintah-patients')}}" class="dropdown-option">Patients</a>
+                            <a href="{{route('pemerintah-hospitals')}}" class="dropdown-option">Hospitals</a>
                         </div>
                         <div class="dropdown-section">
-                            <a href="/add-hospital" class="dropdown-option">Add Hospital</a>
+                            <a href="{{route('add-hospital')}}" class="dropdown-option">Add Hospital</a>
                         </div> -->
                         <!-- Show this if pemerintah is logged in -->
 
@@ -81,13 +83,43 @@
 
         @yield('content')
 
+        <div>
+            <div id="nav-for-dev" class="mt-5">
+                <table style="width:100%">
+                    <tr>
+                      <th>User</th>
+                      <th>Pemerintah</th> 
+                      <th>RS</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <li><a href="{{route('form')}}">Fill form</a></li>
+                            <li><a href="{{route('vacc-ticket')}}">Vacc ticket</a> </li>
+                            <li><a href="{{route('profile-patient')}}">Profile patient</a></li>
+                        </td>
+                        <td>
+                            <li><a href="{{route('pemerintah-patients')}}">pemerintah-patients</a></li>
+                            <li><a href="{{route('pemerintah-hospitals')}}">pemerintah-hospitals</a></li>
+                            <li><a href="{{route('add-hospital')}}">add-hospital</a></li>
+                            <li><a href="{{route('edit-hospital')}}">edit-hospital</a></li>
+                        </td>
+                        <td>
+                            <li><a href="{{route('rs-profile')}}">rs-profile</a></li>
+                            <li><a href="{{route('rs-edit-profile')}}">rs-edit-profile</a></li>
+                            <li><a href="{{route('rs-quota')}}">rs-quota</a></li>
+                            <li><a href="{{route('rs-patients')}}">rs-patients</a></li>
+                        </td>
+                    </tr>
+            </div>
+        </div>
+
         <footer class="footer">
-            <a href="/" class="logo-box">
+            <a href="{{route('home')}}" class="logo-box">
                 <img src="{{ asset('assets/logo.png') }}" alt="" class="logo">
             </a>
             <div class="header__link-box">
-                <a href="/home" class="link-item"><p class="text-regular text-white">Home</p></a>
-                <a href="/contact-us" class="link-item"><p class="text-regular text-white">Contact Us</p></a>
+                <a href="{{route('home')}}" class="link-item"><p class="text-regular text-white">Home</p></a>
+                <a href="{{route('contact-us')}}" class="link-item"><p class="text-regular text-white">Contact Us</p></a>
             </div>
             <div class="header__util">
                 <p class="text-regular text-white">&#169;2020-Form | All Rights Reserved</p>

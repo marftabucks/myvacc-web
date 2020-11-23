@@ -10,7 +10,7 @@
 
     <div class="tab">
         <a href="#" class="tab-link active">Patients</a>
-        <a href="/dashboard-pemerintah-hospitals" class="tab-link">Hospitals</a>
+        <a href="{{route('pemerintah-hospitals')}}" class="tab-link">Hospitals</a>
     </div>
 
     <table class="table table-striped">

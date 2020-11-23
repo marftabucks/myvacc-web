@@ -8,8 +8,11 @@
 <div class="profile-patient">
     <div class="container container--left container--xl">
         <h2 class="heading-2 margin-bottom-xs align-self-center">Patient Profile</h1>
+
+        <!-- Show this if user is verified -->
         <p class="status status--success margin-bottom-xl">Your account is verified</p>
 
+        <!-- Show this if user is not verified -->
         <!-- <p class="status status--alert margin-bottom-xl">Your account is not verified</p> -->
 
         <div class="profile-patient__flex-container">
