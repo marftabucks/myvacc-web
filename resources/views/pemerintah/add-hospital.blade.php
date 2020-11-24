@@ -30,7 +30,6 @@
                 <p class="text-regular">Province</p>
                 <select name="province" id="province" class="select" required>
                     <option value="" selected hidden>Select your province</option>
-                    <option value="Jawa Barat">Jawa Barat</option>
                 </select>
             </div>
             
@@ -38,7 +37,6 @@
                 <p class="text-regular">City / Regency</p>
                 <select name="city" id="city" class="select" required>
                     <option value="" selected hidden>Select your city/regency</option>
-                    <option value="Bandung">Bandung</option>
                 </select>
             </div>
 

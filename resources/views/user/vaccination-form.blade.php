@@ -23,7 +23,6 @@
                 <p class="text-regular">Province</p>
                 <select name="province" id="province" class="select" required>
                     <option value="" selected hidden>Select your province</option>
-                    <option value="Province 1">Province 1</option>
                 </select>
             </div>
 
@@ -31,9 +30,6 @@
                 <p class="text-regular">City / Regency</p>
                 <select name="city" id="city" class="select" required>
                     <option value="" selected hidden>Select your city/regency</option>
-                    <option value="City 1">City 1</option>
-                    <option value="City 2">City 2</option>
-                    <option value="City 3">City 3</option>
                 </select>
             </div>
 

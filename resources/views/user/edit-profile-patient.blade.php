@@ -25,7 +25,6 @@
                 <p class="text-regular">Province</p>
                 <select name="province" id="province" class="select">
                     <option value="" selected hidden>Select your province</option>
-                    <option value="">Jawa Barat</option>
                 </select>
             </div>
 
@@ -33,7 +32,6 @@
                 <p class="text-regular">City / Regency</p>
                 <select name="city" id="city" class="select">
                     <option value="" selected hidden>Select your city/regency</option>
-                    <option value="">Poliwalimandar</option>
                 </select>
             </div>
 
