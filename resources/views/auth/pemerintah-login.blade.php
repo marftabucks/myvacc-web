@@ -7,8 +7,8 @@
 @section('content')
 <div class="login">
     <div class="container container--m">
-        <h1 class="heading-2 margin-bottom-l">Log In (Admin)</h1>
-        <form action="{{route('admin-login')}}" method="POST" class="form">
+        <h1 class="heading-2 margin-bottom-l">Log In (Pemerintah)</h1>
+        <form action="{{route('pemerintah-login')}}" method="POST" class="form">
             @csrf
             <div class="form__input">
                 <p class="text-regular">E-mail</p>

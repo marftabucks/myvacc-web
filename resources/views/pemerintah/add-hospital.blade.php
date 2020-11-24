@@ -9,11 +9,11 @@
     <div class="container container--left container--xl">
         <h2 class="heading-2 margin-bottom-xl align-self-center">Add Hospital</h1>
 
-        <form action="" class="form">
-
+        <form action="{{route('add-hospital')}}" method="POST" class="form">
+            @csrf
             <div class="form__input">
                 <p class="text-regular">Hospital Name</p>
-                <input type="text" class="input" name="hospital-name" required>
+                <input type="text" class="input" name="name" required>
             </div>
 
             <div class="form__input">
@@ -28,17 +28,17 @@
 
             <div class="form__input">
                 <p class="text-regular">Province</p>
-                <select name="province" id="province" class="select">
+                <select name="province" id="province" class="select" required>
                     <option value="" selected hidden>Select your province</option>
-                    <option value="">Jawa Barat</option>
+                    <option value="Jawa Barat">Jawa Barat</option>
                 </select>
             </div>
             
             <div class="form__input">
                 <p class="text-regular">City / Regency</p>
-                <select name="city" id="city" class="select">
+                <select name="city" id="city" class="select" required>
                     <option value="" selected hidden>Select your city/regency</option>
-                    <option value="">City 1</option>
+                    <option value="Bandung">Bandung</option>
                 </select>
             </div>
 
