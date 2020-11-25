@@ -20,7 +20,7 @@ class Quota extends Model
         'name_rs',
         'date',
         'quota',
-        'filled_quota',
+        'available',
     ];
     // id_rs nama_rs quota
 

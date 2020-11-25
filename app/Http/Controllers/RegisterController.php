@@ -32,7 +32,7 @@ class RegisterController extends Controller
                 'email' => $request->email,
                 'selfie' => $request->selfie,
             ]);
-            return redirect()->intended('dashboard-user');
+            return redirect()->intended('home');
         }
     }
 }

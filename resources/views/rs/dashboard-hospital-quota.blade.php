@@ -35,15 +35,17 @@
             <tr>
                 <th scope="col">Date</th>
                 <th scope="col">Quota</th>
+                <th scope="col">Available</th>
             </tr>
         </thead>
         <tbody>
-            @for ($i = 0; $i < 9; $i++)
-            <tr>
-                <td>December 1st 2020</td>
-                <td>150/250</td>
-            </tr>
-            @endfor
+            @foreach ($quotas as $quota)
+                <tr>
+                    <td>{{$quota->date}}</td>
+                    <td>{{$quota->quota}}</td>
+                    <td>{{$quota->available}}</td>
+                </tr>
+            @endforeach
         </tbody>
     </table>
 

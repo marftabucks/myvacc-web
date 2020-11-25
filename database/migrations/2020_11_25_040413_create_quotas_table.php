@@ -19,7 +19,7 @@ class CreateQuotasTable extends Migration
             $table->string('name_rs');
             $table->date('date');
             $table->integer('quota');
-            $table->integer('filled_quota')->default(0);
+            $table->integer('available');
             $table->timestamps();
         });
     }

@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('meta-title')
-    MyVacc | Register Admin
+    MyVacc | Register Pemerintah
 @endsection
 
 @section('content')
@@ -9,7 +9,7 @@
     <div class="container container--m">
         <h2 class="heading-2 margin-bottom-l">Register</h1>
 
-        <form action="{{route('admin-register')}}" method="post" class="form">
+        <form action="{{route('pemerintah-register')}}" method="post" class="form">
             @csrf
             <div class="form__input">
                 <p class="text-regular">Full Name</p>
