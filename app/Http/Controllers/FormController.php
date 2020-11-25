@@ -5,11 +5,19 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Form;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class FormController extends Controller
 {
     public function index(){
-        return view('user.vaccination-form');
+
+        $user = DB::table('pasiens')
+                -> select(DB::raw('id,name,email,nik,selfie,verified,filled_form'))
+                -> where('id','=',Auth::id())
+                -> get();
+        $user = $user[0];
+
+        return view('user.vaccination-form',['user' => $user]);
     }
     public function store(Request $request){
         Form::create([
@@ -23,8 +31,14 @@ class FormController extends Controller
             'time' => $request->time,
         ]);
 
-        // echo('form added');
+        DB::table('pasiens')
+              ->where('id', Auth::id())
+              ->update([
+                  'filled_form' => True,
+                  ]);
 
+        // echo('form added');
+ 
         return redirect()->intended('home');
     }
 }
