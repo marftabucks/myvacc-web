@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('meta-title')
-    MyVacc | Dashboard (Patients)
+    MyVacc | Dashboard RS
 @endsection
 
 @section('content')
@@ -27,15 +27,15 @@
             </tr>
         </thead>
         <tbody>
-            @for ($i = 0; $i < 9; $i++)
+            @foreach ($list as $item)
             <tr>
-                <td>{{$i + 1}}</td>
-                <td>325345</td>
-                <td>Setyawan Putra</td>
-                <td>sputra@gmail.com</td>
-                <td>17.00-18.00</td>
+                <td>no</td>
+                <td>{{$item->nik}}</td>
+                <td>{{$item->name}}</td>
+                <td>{{$item->email}}</td>
+                <td>{{$item->time}}</td>
             </tr>
-            @endfor
+            @endforeach
         </tbody>
     </table>
 </div>
