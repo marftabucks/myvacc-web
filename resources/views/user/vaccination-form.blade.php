@@ -53,9 +53,9 @@
                     <p class="text-regular">Time</p>
                     <select name="time" id="time" class="select" required>
                         <option value="" selected hidden>Select time</option>
-                        <option value="8">08.00 - 09.00</option>
-                        <option value="9">09.00 - 10.00</option>
-                        <option value="10">10.00 - 11.00</option>
+                        <option value="08.00">08.00 - 09.00</option>
+                        <option value="09.00">09.00 - 10.00</option>
+                        <option value="10.00">10.00 - 11.00</option>
                     </select>
                 </div>
             </div>

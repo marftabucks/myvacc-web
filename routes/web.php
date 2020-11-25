@@ -4,7 +4,9 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\PemerintahRegisterController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PemerintahLoginController;
+use App\Http\Controllers\RSLoginController;
 use App\Http\Controllers\LogoutController;
+
 use App\Http\Controllers\DashboardUserController;
 use App\Http\Controllers\FormController;
 use App\Http\Controllers\VaccTicketController;
@@ -46,6 +48,8 @@ Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::get('/pemerintah-login', [PemerintahLoginController::class, 'index'])->name('pemerintah-login');
 Route::post('/pemerintah-login', [PemerintahLoginController::class, 'authenticate']);
+Route::get('/rs-login', [RSLoginController::class, 'index'])->name('rs-login');
+Route::post('/rs-login', [RSLoginController::class, 'authenticate']);
 Route::get('/logout', [LogoutController::class, 'index'])->name('logout');
 
 // USER
