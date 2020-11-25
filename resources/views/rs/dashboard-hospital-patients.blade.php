@@ -23,6 +23,7 @@
                 <th scope="col">NIK</th>
                 <th scope="col">Full Name</th>
                 <th scope="col">E-mail</th>
+                <th scope="col">Date</th>
                 <th scope="col">Time</th>
             </tr>
         </thead>
@@ -33,6 +34,7 @@
                 <td>{{$item->nik}}</td>
                 <td>{{$item->name}}</td>
                 <td>{{$item->email}}</td>
+                <td>{{$item->date}}</td>
                 <td>{{$item->time}}</td>
             </tr>
             @endforeach
