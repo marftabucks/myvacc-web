@@ -3,11 +3,8 @@
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\PemerintahRegisterController;
 use App\Http\Controllers\LoginController;
-use App\Http\Controllers\PemerintahLoginController;
-use App\Http\Controllers\RSLoginController;
 use App\Http\Controllers\LogoutController;
 
-use App\Http\Controllers\DashboardUserController;
 use App\Http\Controllers\FormController;
 use App\Http\Controllers\VaccTicketController;
 use App\Http\Controllers\ProfilePatientController;
@@ -25,16 +22,6 @@ use Illuminate\Routing\RouteDependencyResolverTrait;
 use Illuminate\Support\Facades\Route;
 use Illuminate\HTTP\Request;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 Route::get('/', function () {return view('home');});
 Route::get('home', function(){return View::make('home');})->name('home');
 Route::get('contact-us', function(){return View::make('contact-us');})->name('contact-us');
@@ -46,14 +33,9 @@ Route::get('/pemerintah-register', [PemerintahRegisterController::class, 'index'
 Route::post('/pemerintah-register', [PemerintahRegisterController::class, 'store']);
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'authenticate']);
-Route::get('/pemerintah-login', [PemerintahLoginController::class, 'index'])->name('pemerintah-login');
-Route::post('/pemerintah-login', [PemerintahLoginController::class, 'authenticate']);
-Route::get('/rs-login', [RSLoginController::class, 'index'])->name('rs-login');
-Route::post('/rs-login', [RSLoginController::class, 'authenticate']);
 Route::get('/logout', [LogoutController::class, 'index'])->name('logout');
 
 // USER
-Route::get('/dashboard-user', [DashboardUserController::class, 'index'])->name('dashboard-user');
 Route::get('/form', [FormController::class, 'index'])->name('form');
 Route::post('/form', [FormController::class, 'store']);
 Route::get('/vacc-ticket', [VaccTicketController::class, 'index'])->name('vacc-ticket');

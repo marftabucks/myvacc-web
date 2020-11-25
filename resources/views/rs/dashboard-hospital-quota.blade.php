@@ -46,5 +46,19 @@
             @endfor
         </tbody>
     </table>
+
+    <h1>ADD QUOTA</h1>
+    <form action="" class="width-20 margin-left-auto" style="display:inline-block">
+        <div class="form__input width-50">
+            <p class="text-regular">Date</p>
+            <input type="date" name="date" id="date" class="input" min="" max="" required>
+        </div>
+        <div class="form__input width-50">
+            <p class="text-regular">Quota</p>
+            <input type="integer" name="quota" id="quota" class="input" min="" max="" required>
+        </div>
+        <input type="submit" value="Add" class="cta cta--secondary margin-bottom-xs">
+    </form>
+    
 </div>
 @endsection
