@@ -16,23 +16,24 @@
     <table class="table table-striped">
         <thead>
             <tr>
+                <th scope="col">Action</th>
                 <th scope="col">Hospital Name</th>
                 <th scope="col">Province</th>
                 <th scope="col">City / Regency</th>
                 <th scope="col">Address</th>
-                <th scope="col">Action</th>
             </tr>
         </thead>
         <tbody>
-            @for ($i = 0; $i < 10; $i++)
-            <tr>
-                <td>JIH</td>
-                <td>Special Region of Yogyakarta</td>
-                <td>Sleman Regency</td>
-                <td>Ringroad Street</td>
-                <td><a href="{{route('rs-edit-profile')}}" class="button button--green">Edit</a></td>
-            </tr>
-            @endfor
+            @foreach ($hospitals as $hospital)
+                <tr>
+                    <td><a href="{{route('rs-edit-profile')}}" class="button button--green">Edit</a></td>
+                    <td>{{$hospital->name}}</td>
+                    <td>{{$hospital->province}}</td>
+                    <td>{{$hospital->city}}</td>
+                    <td>{{$hospital->address}}</td>
+                </tr>
+            @endforeach
+            
         </tbody>
     </table>
 </div>
