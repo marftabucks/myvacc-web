@@ -20,4 +20,13 @@ class PemerintahHospitalController extends Controller
                      
         return view('pemerintah.dashboard-pemerintah-hospitals',['hospitals' => $hospitals]);
     }
+
+    public function store(Request $request){
+
+        // dd($request);
+        $id = $request->id;
+
+        $hospital = RS::find($id);
+        return view('pemerintah.edit-hospital',['hospital' => $hospital]);
+    }
 }

@@ -46,9 +46,11 @@ Route::get('/edit-profile-patient', [EditProfilePatientController::class, 'index
 Route::get('/pemerintah-patients', [PemerintahPatientController::class, 'index'])->name('pemerintah-patients');
 Route::post('/pemerintah-patients', [PemerintahPatientController::class, 'store']);
 Route::get('/pemerintah-hospitals', [PemerintahHospitalController::class, 'index'])->name('pemerintah-hospitals');
+Route::post('/pemerintah-hospitals', [PemerintahHospitalController::class, 'store']);
 Route::get('/add-hospital', [PemerintahAddHospitalController::class, 'index'])->name('add-hospital');
 Route::post('/add-hospital', [PemerintahAddHospitalController::class, 'store']);
 Route::get('/edit-hospital', [PemerintahEditHospitalController::class, 'index'])->name('edit-hospital');
+Route::post('/edit-hospital', [PemerintahEditHospitalController::class, 'store']);
  
 // RUMAH SAKIT
 Route::get('/rs-profile', [RSProfileController::class, 'index'])->name('rs-profile');

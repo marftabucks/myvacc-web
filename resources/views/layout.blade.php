@@ -97,36 +97,6 @@
 
         @yield('content')
 
-        <div>
-            <div id="nav-for-dev" class="mt-5">
-                <table style="width:100%">
-                    <tr>
-                      <th>User</th>
-                      <th>Pemerintah</th> 
-                      <th>RS</th>
-                    </tr>
-                    <tr>
-                        <td>
-                            <li><a href="{{route('form')}}">Fill form</a></li>
-                            <li><a href="{{route('vacc-ticket')}}">Vacc ticket</a> </li>
-                            <li><a href="{{route('profile-patient')}}">Profile patient</a></li>
-                        </td>
-                        <td>
-                            <li><a href="{{route('pemerintah-patients')}}">pemerintah-patients</a></li>
-                            <li><a href="{{route('pemerintah-hospitals')}}">pemerintah-hospitals</a></li>
-                            <li><a href="{{route('add-hospital')}}">add-hospital</a></li>
-                            <li><a href="{{route('edit-hospital')}}">edit-hospital</a></li>
-                        </td>
-                        <td>
-                            <li><a href="{{route('rs-profile')}}">rs-profile</a></li>
-                            <li><a href="{{route('rs-edit-profile')}}">rs-edit-profile</a></li>
-                            <li><a href="{{route('rs-quota')}}">rs-quota</a></li>
-                            <li><a href="{{route('rs-patients')}}">rs-patients</a></li>
-                        </td>
-                    </tr>
-            </div>
-        </div>
-
         <footer class="footer">
             <a href="{{route('home')}}" class="logo-box">
                 <img src="{{ asset('assets/logo.png') }}" alt="" class="logo">

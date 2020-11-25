@@ -26,7 +26,14 @@
         <tbody>
             @foreach ($hospitals as $hospital)
                 <tr>
-                    <td><a href="{{route('rs-edit-profile')}}" class="button button--green">Edit</a></td>
+                    <td>
+                        {{-- <form action="{{route('edit-hospital',$hospital->id)}}"> --}}
+                        <form action="{{route('edit-hospital')}}">
+                            @csrf
+                            <input type="hidden" id="id" name="id" value={{$hospital->id}}>
+                            <button class="button button--green">Edit</button>
+                        </form>
+                    </td>
                     <td>{{$hospital->name}}</td>
                     <td>{{$hospital->province}}</td>
                     <td>{{$hospital->city}}</td>
