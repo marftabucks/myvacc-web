@@ -9,9 +9,16 @@ class Quota extends Model
 {
     use HasFactory;
 
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+
     protected $fillable = [
         'id_rs',
-        'nama_rs',
+        'name_rs',
+        'date',
         'quota',
         'filled_quota',
     ];

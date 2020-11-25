@@ -53,4 +53,5 @@ Route::get('/edit-hospital', [PemerintahEditHospitalController::class, 'index'])
 Route::get('/rs-profile', [RSProfileController::class, 'index'])->name('rs-profile');
 Route::get('/rs-edit-profile', [RSEditProfileController::class, 'index'])->name('rs-edit-profile');
 Route::get('/rs-quota', [RSQuotaController::class, 'index'])->name('rs-quota');
+Route::post('/rs-quota', [RSQuotaController::class, 'store']);
 Route::get('/rs-patients', [RSPatientsController::class, 'index'])->name('rs-patients');

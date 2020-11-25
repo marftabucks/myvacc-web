@@ -16,9 +16,10 @@ class CreateQuotasTable extends Migration
         Schema::create('quotas', function (Blueprint $table) {
             $table->id();
             $table->string('id_rs');
-            $table->string('nama_rs');
+            $table->string('name_rs');
+            $table->date('date');
             $table->integer('quota');
-            $table->integer('filled_quota');
+            $table->integer('filled_quota')->default(0);
             $table->timestamps();
         });
     }
