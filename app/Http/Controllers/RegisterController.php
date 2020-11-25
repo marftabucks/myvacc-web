@@ -21,7 +21,6 @@ class RegisterController extends Controller
             'password' => Hash::make($request->password),
         ]);
         
-
         $credentials = $request->only('email', 'password');
 
         if (Auth::attempt($credentials)) {

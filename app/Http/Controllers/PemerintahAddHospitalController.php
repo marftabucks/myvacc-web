@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Models\RS;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class PemerintahAddHospitalController extends Controller
 {
@@ -22,8 +23,13 @@ class PemerintahAddHospitalController extends Controller
             'role' => 'rs'
         ]);
         // name email password province city address
+            
+        $id_rs = DB::table('users')->select(DB::raw('id'))->where('email','=',$request->email)->get();
+
+        $id_rs = $id_rs[0]->id;
 
         RS::create([
+            'id' => $id_rs,
             'name' => $request->name,
             'email' => $request->email,
             'province' => $request->province,

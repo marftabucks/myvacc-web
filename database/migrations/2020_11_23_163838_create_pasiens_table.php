@@ -20,7 +20,7 @@ class CreatePasiensTable extends Migration
             $table->string('nik')->unique();
             $table->string('selfie')->nullable();
             $table->boolean('verified')->default(False);
-            $table->boolean('filled-form')->default(False);
+            $table->boolean('filled_form')->default(False);
             $table->timestamps();
         });
     }
