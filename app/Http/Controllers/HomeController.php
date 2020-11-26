@@ -10,14 +10,17 @@ class HomeController extends Controller
 {
     public function index(){ 
 
-        $user = DB::table('pasiens')
-                -> select(DB::raw('id,name,filled_form'))
-                -> where('id','=',Auth::id())
-                -> get();
-        if ($user != null){
+        $user = null;
+
+        if(Auth::user()){
+            $user = DB::table('pasiens')
+            -> select(DB::raw('id,name,filled_form'))
+            -> where('id','=',Auth::id())
+            -> get();
+
             $user = $user[0];
         }
-        
+
         return view('home',['user' => $user]);
     }
 }
