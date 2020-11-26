@@ -24,7 +24,7 @@
                     <input type="text" class="input" id="name" name="name" value="{{$user->name}}" readonly required>
                 </div>
     
-                <div class="form__input">
+                {{-- <div class="form__input">
                     <p class="text-regular">Province</p>
                     <select name="province" id="province" class="select" required>
                         <option value="" selected hidden>Select your province</option>
@@ -36,24 +36,24 @@
                     <select name="city" id="city" class="select" required>
                         <option value="" selected hidden>Select your city/regency</option>
                     </select>
-                </div>
+                </div> --}}
     
                 <div class="form__input">
                     <p class="text-regular">Hospital</p>
-                    <select name="hospital" id="hospital" class="select" required>
+                    <select name="hospital_id" id="hospital_id" class="select" required>
                         <option value="" selected hidden>Select your preferred hospital</option>
-                        <option value="Hospital 1">Hospital 1</option>
-                        <option value="Hospital 2">Hospital 2</option>
-                        <option value="Hospital 3">Hospital 3</option>
-                        <option value="Hospital 4">Hospital 4</option>
+                        @foreach ($hospitals as $hospital)
+                            <option value="{{$hospital->id}}">{{$hospital->name}} ({{$hospital->province}}-{{$hospital->city}})</option>    
+                        @endforeach
                     </select>
                 </div>
     
-                <div class="form__input--horizontal">
-                    <div class="form__input width-50">
-                        <p class="text-regular">Date</p>
-                        <input type="date" name="date" id="date" class="input" min="" max="" required>
-                    </div>
+                <div class="form__input width-100">
+                    <p class="text-regular">Date</p>
+                    <input type="date" name="date" id="date" class="input" min="" max="" required>
+                </div>
+                {{-- <div class="form__input--horizontal">
+                    
                     <div class="form__input width-45">
                         <p class="text-regular">Time</p>
                         <select name="time" id="time" class="select" required>
@@ -63,9 +63,9 @@
                             <option value="10:00:00">10.00 - 11.00</option>
                         </select>
                     </div>
-                </div>
+                </div> --}}
                 
-                <input type="submit" value="Register" class="cta cta--secondary margin-bottom-xs">
+                <input type="submit" value="Next" class="cta cta--secondary margin-bottom-xs">
             </form>
         @endif
         

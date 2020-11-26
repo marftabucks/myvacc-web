@@ -7,6 +7,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
 
 use App\Http\Controllers\FormController;
+use App\Http\Controllers\Form2Controller;
 use App\Http\Controllers\VaccTicketController;
 use App\Http\Controllers\ProfilePatientController;
 use App\Http\Controllers\PemerintahHospitalController;
@@ -39,6 +40,8 @@ Route::get('/logout', [LogoutController::class, 'index'])->name('logout');
 // USER
 Route::get('/form', [FormController::class, 'index'])->name('form');
 Route::post('/form', [FormController::class, 'store']);
+Route::get('/form2', [Form2Controller::class, 'index'])->name('form2');
+Route::post('/form2', [Form2Controller::class, 'store']);
 Route::get('/vacc-ticket', [VaccTicketController::class, 'index'])->name('vacc-ticket');
 Route::get('/profile-patient', [ProfilePatientController::class, 'index'])->name('profile-patient');
 Route::get('/edit-profile-patient', [EditProfilePatientController::class, 'index'])->name('edit-profile-patient');

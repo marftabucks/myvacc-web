@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Form;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Symfony\Component\Console\Helper\Table;
 
 class FormController extends Controller
 {
@@ -15,21 +16,35 @@ class FormController extends Controller
                 -> select(DB::raw('id,name,email,nik,selfie,verified,filled_form'))
                 -> where('id','=',Auth::id())
                 -> get();
-        if ($user != null){
-            $user = $user[0];
-        }
+        $user = $user[0];
+
+        $hospitals = DB::table('r_s')
+                     ->select(DB::raw('id,name, province, city'))
+                     ->orderBy('province')
+                     ->orderBy('city')
+                     ->orderBy('name')
+                     ->get();
         
-        return view('user.vaccination-form',['user' => $user]);
+        return view('user.vaccination-form',['user' => $user, 'hospitals' => $hospitals]);
     }
     public function store(Request $request){
+
+        $hospital_id = $request->hospital_id;
+
+        $hospital = DB::table('hospitals')
+                -> select(DB::raw('id,name,province,city'))
+                -> where('id','=',$hospital_id)
+                -> get();
+        $hospital = $hospital[0];
+
         Form::create([
             'id_user' => Auth::id() ,
             'name' => $request->name,
-            'id_rs' => 1,
-            'hospital' => $request->hospital,
-            'province' => $request->province,
-            'city' => $request->city,
-            'date' => $request->date,
+            'id_rs' => $request->hospital_id,
+            'hospital' => $hospital->name,
+            'province' => $hospital->province,
+            'city' => $hospital->city,
+            'date' => '2000-10-10',
             'time' => $request->time,
         ]);
 
@@ -41,6 +56,6 @@ class FormController extends Controller
 
         // echo('form added');
  
-        return redirect()->intended('home');
+        return redirect()->intended('form2',['hospital_id'=>$hospital_id]);
     }
 }
