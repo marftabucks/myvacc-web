@@ -41,6 +41,7 @@ Route::post('/form', [FormController::class, 'store']);
 Route::get('/vacc-ticket', [VaccTicketController::class, 'index'])->name('vacc-ticket');
 Route::get('/profile-patient', [ProfilePatientController::class, 'index'])->name('profile-patient');
 Route::get('/edit-profile-patient', [EditProfilePatientController::class, 'index'])->name('edit-profile-patient');
+Route::post('/edit-profile-patient', [EditProfilePatientController::class, 'store']);
 
 // PEMERINTAH
 Route::get('/pemerintah-patients', [PemerintahPatientController::class, 'index'])->name('pemerintah-patients');
