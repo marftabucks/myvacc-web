@@ -15,7 +15,12 @@
                 
                 @if (auth()->user())
                 <!-- Show this if user is logged in -->
+                    @if ($user->filled_form == 1)
+                        <a href="{{route('vacc-ticket')}}" class="cta cta--large cta--secondary margin-bottom-xs">Vaccination Ticket</a>
+                    @else
                     <a href="{{route('form')}}" class="cta cta--large cta--secondary margin-bottom-xs">Register Vaccination</a>
+                    @endif
+                        
                 <!-- Show this if user is logged in -->
                 @else 
                 <!-- Show this if user is not logged in -->

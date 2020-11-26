@@ -15,7 +15,9 @@ class FormController extends Controller
                 -> select(DB::raw('id,name,email,nik,selfie,verified,filled_form'))
                 -> where('id','=',Auth::id())
                 -> get();
-        $user = $user[0];
+        if ($user != null){
+            $user = $user[0];
+        }
         
         return view('user.vaccination-form',['user' => $user]);
     }

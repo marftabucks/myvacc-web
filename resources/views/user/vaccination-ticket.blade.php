@@ -53,10 +53,10 @@
             <p class="text-regular">17.00 - 18.00</p>
         </div>
 
-        <div class="vaccination-ticket__subcontainer align-self-center">
+        {{-- <div class="vaccination-ticket__subcontainer align-self-center">
             <p class="text-bold text-center">Queue Number</p>
             <p class="text-regular text-center">3</p>
-        </div>
+        </div> --}}
         @endif
     </div>
 </div>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\PemerintahRegisterController;
 use App\Http\Controllers\LoginController;
@@ -23,7 +24,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\View;
 
 Route::get('/', function () {return redirect()->intended('home');});
-Route::get('home', function(){return View::make('home');})->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('contact-us', function(){return View::make('contact-us');})->name('contact-us');
 
 // AUTH

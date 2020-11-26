@@ -11,7 +11,8 @@
 
         @if ($user->filled_form == 1)
             <p>You have filled in form</p>
-            <a href="{{route('home')}}">Return home</a>
+            <p>Go to<a href="{{route('vacc-ticket')}}">Vaccination Ticket</a> </p>
+            
         @elseif($user->verified == 0)
             <p class="status status--alert margin-bottom-xl">Your account is not verified</p>
         @else
