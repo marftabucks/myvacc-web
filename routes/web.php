@@ -20,9 +20,9 @@ use App\Http\Controllers\RSPatientsController;
 
 use Illuminate\Routing\RouteDependencyResolverTrait;
 use Illuminate\Support\Facades\Route;
-use Illuminate\HTTP\Request;
+use Illuminate\Support\Facades\View;
 
-Route::get('/', function () {return view('home');});
+Route::get('/', function () {return redirect()->intended('home');});
 Route::get('home', function(){return View::make('home');})->name('home');
 Route::get('contact-us', function(){return View::make('contact-us');})->name('contact-us');
 
