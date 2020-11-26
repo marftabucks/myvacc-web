@@ -16,7 +16,7 @@ class FormController extends Controller
                 -> where('id','=',Auth::id())
                 -> get();
         $user = $user[0];
-
+        
         return view('user.vaccination-form',['user' => $user]);
     }
     public function store(Request $request){

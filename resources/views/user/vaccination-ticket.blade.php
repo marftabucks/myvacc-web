@@ -9,6 +9,10 @@
     <div class="container container--left container--l">
         <h2 class="heading-2 margin-bottom-xl align-self-center">Vaccination Ticket</h1>
 
+        @if($user->filled_form == 0)
+            <p class="status status--alert margin-bottom-xl">Fill the vaccination form first</p>
+            <a href="{{route('form')}}">Vaccination Form</a>
+        @else
         <div class="vaccination-ticket__subcontainer">
             <p class="text-bold">Vaccination ID</p>
             <p class="text-regular">235252</p>
@@ -53,6 +57,7 @@
             <p class="text-bold text-center">Queue Number</p>
             <p class="text-regular text-center">3</p>
         </div>
+        @endif
     </div>
 </div>
 @endsection
