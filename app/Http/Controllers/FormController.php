@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\DB;
 
 class FormController extends Controller
 {
-    public function index(){
+    public function index(){ 
 
         $user = DB::table('pasiens')
                 -> select(DB::raw('id,name,email,nik,selfie,verified,filled_form'))

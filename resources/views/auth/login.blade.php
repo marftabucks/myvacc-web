@@ -8,6 +8,9 @@
 <div class="login">
     <div class="container container--m">
         <h2 class="heading-2 margin-bottom-l">Log In</h1>
+        {{-- @if ($wrong == True)
+            <p class="text-alert">Email or password is wrong!</p>
+        @endif --}}
         <form action="{{route('login')}}" method="POST" class="form">
             @csrf
             <div class="form__input">
