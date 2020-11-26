@@ -15,48 +15,45 @@
         @else
         <div class="vaccination-ticket__subcontainer">
             <p class="text-bold">Vaccination ID</p>
-            <p class="text-regular">235252</p>
+            <p class="text-regular">{{$vaccform->id}}</p>
         </div>
 
         <div class="vaccination-ticket__subcontainer">
             <p class="text-bold">Full Name</p>
-            <p class="text-regular">Setyawan Putra</p>
+            <p class="text-regular">{{$vaccform->name}}</p>
         </div>
 
         <div class="vaccination-ticket__subcontainer">
             <p class="text-bold">Hospital</p>
-            <p class="text-regular">Gadjah Mada Medical Center</p>
+            <p class="text-regular">{{$vaccform->hospital}}</p>
         </div>
 
         <div class="vaccination-ticket__subcontainer">
             <p class="text-bold">Province</p>
-            <p class="text-regular">Special Region of Yogyakarta</p>
+            <p class="text-regular">{{$vaccform->province}}</p>
         </div>
 
         <div class="vaccination-ticket__subcontainer">
             <p class="text-bold">City / Regency</p>
-            <p class="text-regular">Sleman Regency</p>
+            <p class="text-regular">{{$vaccform->city}}</p>
         </div>
 
         <div class="vaccination-ticket__subcontainer">
             <p class="text-bold">Address</p>
-            <p class="text-regular">Jl. Kesehatan No. 2</p>
+            <p class="text-regular">NANTI DIEDIT</p>
         </div>
 
         <div class="vaccination-ticket__subcontainer">
             <p class="text-bold">Date</p>
-            <p class="text-regular">December 20th 2020</p>
+            <p class="text-regular">{{$vaccform->date}}</p>
         </div>
 
         <div class="vaccination-ticket__subcontainer margin-bottom-m">
             <p class="text-bold">Time</p>
-            <p class="text-regular">17.00 - 18.00</p>
+            <p class="text-regular">{{$vaccform->time}}</p>
         </div>
 
-        {{-- <div class="vaccination-ticket__subcontainer align-self-center">
-            <p class="text-bold text-center">Queue Number</p>
-            <p class="text-regular text-center">3</p>
-        </div> --}}
+        
         @endif
     </div>
 </div>
