@@ -18,29 +18,19 @@
         <div class="profile-patient__flex-container">
             <div class="profile-patient__subcontainer">
                 <p class="text-bold">Full Name</p>
-                <p class="text-regular">Muhammad Yesus Sidartha</p>
+                <p class="text-regular">{{$user->name}}</p>
             </div>
             <a href="/edit-profile-patient" class="cta cta--white">Edit Profile</a>
         </div>
         
         <div class="profile-patient__subcontainer">
             <p class="text-bold">NIK</p>
-            <p class="text-regular">461000008157236</p>
+            <p class="text-regular">{{$user->nik}}</p>
         </div>
         
         <div class="profile-patient__subcontainer">
             <p class="text-bold">E-mail</p>
-            <p class="text-regular">m.yesusidartha@gmail.com</p>
-        </div>
-        
-        <div class="profile-patient__subcontainer">
-            <p class="text-bold">Province</p>
-            <p class="text-regular">Papua</p>
-        </div>
-
-        <div class="profile-patient__subcontainer">
-            <p class="text-bold">City / Regency</p>
-            <p class="text-regular">Kabupaten Fakfak</p>
+            <p class="text-regular">{{$user->email}}</p>
         </div>
     </div>
 </div>
