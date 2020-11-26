@@ -48,10 +48,10 @@
                     </select>
                 </div>
     
-                <div class="form__input width-100">
+                {{-- <div class="form__input width-100">
                     <p class="text-regular">Date</p>
                     <input type="date" name="date" id="date" class="input" min="" max="" required>
-                </div>
+                </div> --}}
                 {{-- <div class="form__input--horizontal">
                     
                     <div class="form__input width-45">

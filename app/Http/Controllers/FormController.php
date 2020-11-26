@@ -31,7 +31,7 @@ class FormController extends Controller
 
         $hospital_id = $request->hospital_id;
 
-        $hospital = DB::table('hospitals')
+        $hospital = DB::table('r_s')
                 -> select(DB::raw('id,name,province,city'))
                 -> where('id','=',$hospital_id)
                 -> get();
@@ -45,7 +45,7 @@ class FormController extends Controller
             'province' => $hospital->province,
             'city' => $hospital->city,
             'date' => '2000-10-10',
-            'time' => $request->time,
+            'time' => '09:00:00',
         ]);
 
         DB::table('pasiens')
@@ -56,6 +56,6 @@ class FormController extends Controller
 
         // echo('form added');
  
-        return redirect()->intended('form2',['hospital_id'=>$hospital_id]);
+        return redirect()->intended('form2');
     }
 }
