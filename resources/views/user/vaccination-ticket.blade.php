@@ -55,6 +55,8 @@
 
         
         @endif
+
+        <a href="{{ route('home') }}" class="cta cta--secondary align-self-center">Go back to Home</a>
     </div>
 </div>
 @endsection
