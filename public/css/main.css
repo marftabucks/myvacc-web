@@ -505,7 +505,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 .status--alert {
-  background-color: #149708;
+  background-color: #db2f2f;
 }
 
 .tab {

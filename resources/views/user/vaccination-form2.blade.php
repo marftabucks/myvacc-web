@@ -36,7 +36,22 @@
                 @endforeach
             </tbody>
         </table>
-        
+        {{-- <div class="form__input width-100">
+            <p class="text-regular">Date</p>
+            <input type="date" name="date" id="date" class="input" min="" max="" required>
+        </div> --}}
+        {{-- <div class="form__input--horizontal">
+            
+            <div class="form__input width-45">
+                <p class="text-regular">Time</p>
+                <select name="time" id="time" class="select" required>
+                    <option value="" selected hidden>Select time</option>
+                    <option value="08:00:00">08.00 - 09.00</option>
+                    <option value="09:00:00">09.00 - 10.00</option>
+                    <option value="10:00:00">10.00 - 11.00</option>
+                </select>
+            </div>
+        </div> --}}
     </div>
 </div>
 @endsection
