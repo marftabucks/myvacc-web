@@ -11,10 +11,21 @@ use Illuminate\Support\Facades\Hash;
 class RSEditProfileController extends Controller
 {
     public function index(){
-        $id = Auth::id();
-        $hospital = RS::find($id);
+        if (Auth::user()) {
+            if (Auth::user()->role = 'rs') {
+                $id = Auth::id();
+                $hospital = RS::find($id);
 
-        return view('rs.edit-profile-hospital',['hospital' => $hospital]);
+                return view('rs.edit-profile-hospital',['hospital' => $hospital]);
+            }
+            else{
+                return redirect()->intended('home');
+            }
+        }
+        else {
+            return redirect()->intended('home');
+        }
+        
     }
 
     public function store(Request $request){

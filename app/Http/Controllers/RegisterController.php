@@ -11,7 +11,17 @@ use Illuminate\Support\Facades\Auth;
 class RegisterController extends Controller
 {
     public function index(){
-        return view('auth.register');
+        if (Auth::user()) {
+            if (Auth::user()->role = 'pemerintah') {
+                return view('auth.register');
+            }
+            else{
+                return redirect()->intended('home');
+            }
+        }
+        else {
+            return redirect()->intended('home');
+        }
     }
     public function store(Request $request){
         // Storing data to database

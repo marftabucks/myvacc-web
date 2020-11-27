@@ -10,12 +10,23 @@ use Illuminate\Support\Facades\DB;
 class RSQuotaController extends Controller
 {
     public function index(){
-        $quotas = DB::table('quotas')
-                     ->select(DB::raw('name_rs, date, quota, available'))
-                     ->where('id_rs', '=', Auth::id())
-                     ->get();
+        if (Auth::user()) {
+            if (Auth::user()->role = 'rs') {
+                $quotas = DB::table('quotas')
+                            ->select(DB::raw('name_rs, date, quota, available'))
+                            ->where('id_rs', '=', Auth::id())
+                            ->get();
 
-        return view('rs.dashboard-hospital-quota',['quotas' => $quotas]);
+                return view('rs.dashboard-hospital-quota',['quotas' => $quotas]);
+            }
+            else{
+                return redirect()->intended('home');
+            }
+        }
+        else {
+            return redirect()->intended('home');
+        }
+        
     }
     public function store(Request $request){
         Quota::create([

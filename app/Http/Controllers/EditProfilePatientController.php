@@ -10,12 +10,23 @@ use Illuminate\Support\Facades\Hash;
 
 class EditProfilePatientController extends Controller
 {
-    //user/edit-profile-patient
     public function index(){
-        $id = Auth::id();
-        $pasien = Pasien::find($id);
 
-        return view('user.edit-profile-patient',['pasien' => $pasien]);
+        if (Auth::user()) {
+            if (Auth::user()->role = 'pasien') {
+                $id = Auth::id();
+                $pasien = Pasien::find($id);
+
+                return view('user.edit-profile-patient',['pasien' => $pasien]);
+            }
+            else{
+                return redirect()->intended('home');
+            }
+        }
+        else {
+            return redirect()->intended('home');
+        }
+
     }
 
     public function store(Request $request){

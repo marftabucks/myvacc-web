@@ -11,21 +11,32 @@ use Symfony\Component\Console\Helper\Table;
 class FormController extends Controller
 {
     public function index(){ 
+        if (Auth::user()) {
+            if (Auth::user()->role = 'pasien') {
+                $user = DB::table('pasiens')
+                        -> select(DB::raw('id,name,email,nik,selfie,verified,filled_form'))
+                        -> where('id','=',Auth::id())
+                        -> get();
+                $user = $user[0];
 
-        $user = DB::table('pasiens')
-                -> select(DB::raw('id,name,email,nik,selfie,verified,filled_form'))
-                -> where('id','=',Auth::id())
-                -> get();
-        $user = $user[0];
+                $hospitals = DB::table('r_s')
+                            ->select(DB::raw('id,name, province, city'))
+                            ->orderBy('province')
+                            ->orderBy('city')
+                            ->orderBy('name')
+                            ->get();
+                
+                return view('user.vaccination-form',['user' => $user, 'hospitals' => $hospitals]);
+            }
+            else{
+                return redirect()->intended('home');
+            }
+        }
+        else {
+            return redirect()->intended('home');
+        }
 
-        $hospitals = DB::table('r_s')
-                     ->select(DB::raw('id,name, province, city'))
-                     ->orderBy('province')
-                     ->orderBy('city')
-                     ->orderBy('name')
-                     ->get();
         
-        return view('user.vaccination-form',['user' => $user, 'hospitals' => $hospitals]);
     }
     public function store(Request $request){
 
