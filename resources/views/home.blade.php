@@ -14,14 +14,16 @@
                 <p class="text-regular margin-bottom-l">MyVacc came to help the community to prevent the spread of COVID-19 by making it easier to collect data and organize vaccinations so that the Indonesian people can easily get the vaccine for COVID-19.</p>
                 
                 @if (auth()->user())
-                <!-- Show this if user is logged in -->
-                    @if ($user->filled_form == 1)
-                        <a href="{{route('vacc-ticket')}}" class="cta cta--large cta--secondary margin-bottom-xs">Vaccination Ticket</a>
-                    @else
-                        <a href="{{route('form')}}" class="cta cta--large cta--secondary margin-bottom-xs">Register Vaccination</a>
+                    @if (auth()->user()->role == "pasien")
+                        <!-- Show this if user is logged in -->
+                            @if ($user->filled_form == 1)
+                                <a href="{{route('vacc-ticket')}}" class="cta cta--large cta--secondary margin-bottom-xs">Vaccination Ticket</a>
+                            @else
+                                <a href="{{route('form')}}" class="cta cta--large cta--secondary margin-bottom-xs">Register Vaccination</a>
+                            @endif
+                                
+                        <!-- Show this if user is logged in -->
                     @endif
-                        
-                <!-- Show this if user is logged in -->
                 @else 
                 <!-- Show this if user is not logged in -->
                     <a href="{{route('login')}}" class="cta cta--large cta--secondary margin-bottom-xs mr-3">Log In</a>

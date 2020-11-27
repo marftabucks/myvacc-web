@@ -11,7 +11,7 @@ class VaccTicketController extends Controller
 {
     public function index(){
         if (Auth::user()) {
-                if (Auth::user()->role = 'pasien') {
+                if (Auth::user()->role == 'pasien') {
                         $vaccform = DB::table('forms')
                                 -> select(DB::raw('id,id_user,name,id_rs,hospital,province,city,date,created_at,updated_at'))
                                 -> where('id_user','=',Auth::id())

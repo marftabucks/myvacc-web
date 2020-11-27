@@ -12,7 +12,7 @@ class ProfilePatientController extends Controller
     public function index(){
 
         if (Auth::user()) {
-            if (Auth::user()->role = 'pasien') {
+            if (Auth::user()->role == 'pasien') {
                 $user = DB::table('pasiens')
                         -> select(DB::raw('id,name,email,nik,selfie,verified,filled_form'))
                         -> where('id','=',Auth::id())

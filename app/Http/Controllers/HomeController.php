@@ -12,11 +12,13 @@ class HomeController extends Controller
 
         $user = null;
 
-        if(Auth::user()){
+        if(Auth::user()->role == "pasien"){
             $user = DB::table('pasiens')
             -> select(DB::raw('id,name,filled_form'))
             -> where('id','=',Auth::id())
             -> get();
+
+            dd($user);
 
             $user = $user[0];
         }

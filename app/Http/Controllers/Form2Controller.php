@@ -10,7 +10,7 @@ class Form2Controller extends Controller
 {
     public function index(){ 
         if (Auth::user()) {
-            if (Auth::user()->role = 'pasien') {
+            if (Auth::user()->role == 'pasien') {
                 $forms = DB::table('forms')
                      ->select(DB::raw('id,id_rs'))
                      ->where('id_user','=',Auth::id())

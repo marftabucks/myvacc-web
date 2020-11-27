@@ -12,7 +12,7 @@ class RegisterController extends Controller
 {
     public function index(){
         if (Auth::user()) {
-            if (Auth::user()->role = 'pemerintah') {
+            if (Auth::user()->role == 'pemerintah') {
                 return redirect()->intended('home');
             }
             else{

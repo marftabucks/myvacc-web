@@ -11,7 +11,7 @@ class PemerintahPatientController extends Controller
 {
     public function index(){
         if (Auth::user()) {
-            if (Auth::user()->role = 'pemerintah') {
+            if (Auth::user()->role == 'pemerintah') {
 
                 $verified_pasiens = DB::table('pasiens')
                                     ->select(DB::raw('id, name, email, nik, selfie, verified'))

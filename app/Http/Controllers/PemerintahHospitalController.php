@@ -12,7 +12,7 @@ class PemerintahHospitalController extends Controller
     public function index(){
 
         if (Auth::user()) {
-            if (Auth::user()->role = 'pemerintah') {
+            if (Auth::user()->role == 'pemerintah') {
                 $hospitals = DB::table('r_s')
                      ->select(DB::raw('id, name, province, city, address'))
                      ->orderBy('province')
