@@ -41,7 +41,6 @@
                     </button>
                 </td>
                 <td>Yes</td>
-                {{-- <td>{{$unverified_pasien->verified}}</td> --}}
 
                 <!-- Modal -->
                 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -54,7 +53,7 @@
                                 </button>
                             </div>
                             <div class="modal-body">
-                                <img src="" alt="" class="modal-photo">
+                                <img src="{{ asset('assets/'.$unverified_pasien->selfie) }}" alt="" class="modal-photo">
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="cta cta--red" data-dismiss="modal">Close</button>
@@ -93,7 +92,7 @@
                                 </button>
                             </div>
                             <div class="modal-body">
-                                <img src="" alt="" class="modal-photo">
+                                <img src="{{ asset('assets/'.$verified_pasien->selfie) }}" alt="" class="modal-photo">
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="cta cta--red" data-dismiss="modal">Close</button>
