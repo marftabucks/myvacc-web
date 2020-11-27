@@ -14,7 +14,7 @@
             <a href="{{route('form')}}">Vaccination Form</a>
         @else
         <div class="vaccination-ticket__subcontainer">
-            <p class="text-bold">Vaccination ID</p>
+            <p class="text-bold">Form ID</p>
             <p class="text-regular">{{$vaccform->id}}</p>
         </div>
 
@@ -40,7 +40,7 @@
 
         <div class="vaccination-ticket__subcontainer">
             <p class="text-bold">Address</p>
-            <p class="text-regular">NANTI DIEDIT</p>
+            <p class="text-regular">{{$hospital->address}}</p>
         </div>
 
         <div class="vaccination-ticket__subcontainer">
@@ -48,10 +48,10 @@
             <p class="text-regular">{{$vaccform->date}}</p>
         </div>
 
-        <div class="vaccination-ticket__subcontainer margin-bottom-m">
+        {{-- <div class="vaccination-ticket__subcontainer margin-bottom-m">
             <p class="text-bold">Time</p>
             <p class="text-regular">{{$vaccform->time}}</p>
-        </div>
+        </div> --}}
 
         
         @endif

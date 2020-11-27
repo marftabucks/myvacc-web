@@ -44,15 +44,9 @@ class FormController extends Controller
             'hospital' => $hospital->name,
             'province' => $hospital->province,
             'city' => $hospital->city,
-            'date' => '2000-10-10',
-            'time' => '09:00:00',
         ]);
 
-        DB::table('pasiens')
-              ->where('id', Auth::id())
-              ->update([
-                  'filled_form' => True,
-                  ]);
+        
 
         // echo('form added');
  

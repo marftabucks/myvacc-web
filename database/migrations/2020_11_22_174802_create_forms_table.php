@@ -21,8 +21,7 @@ class CreateFormsTable extends Migration
             $table->string('hospital');
             $table->string('province');
             $table->string('city');
-            $table->date('date');
-            $table->time('time');
+            $table->date('date')->nullable();
             $table->timestamps();
         });
     }

@@ -12,6 +12,7 @@
 
         <p>NAMA : {{auth()->user()->name}}</p>
         <p>RS : {{$hospital->name}}</p>
+        <p>Form id : {{$form->id}}</p>
 
         <table class="table table-striped">
             <thead>
@@ -26,12 +27,13 @@
                 <tr>
                     <td>{{$quota->date}}</td>
                     <td>{{$quota->available}}</td>
-                    <td><form action="" method="POST">
+                    <td><form action="{{route('form2')}}" method="POST">
                         @csrf
-                        <input type="hidden" id="id" name="id" value={{$unverified_pasien->id}}>
-                        <button class="button button--green">Verify</button>
+                        <input type="hidden" id="id_form" name="id_form" value={{$form->id}}>
+                        <input type="hidden" id="id_rs" name="id_rs" value={{$quota->id_rs}}>
+                        <input type="hidden" id="date" name="date" value={{$quota->date}}>
+                        <button class="button button--green">Choose</button>
                     </form></td>
-                    
                 </tr>
                 @endforeach
             </tbody>

@@ -17,7 +17,6 @@ class RSPatientsController extends Controller
                 })
                 ->where('id_rs','=',Auth::user()->id)
                 ->orderBy('date')
-                ->orderBy('time')
                 ->get();
 
         // dd($list);
