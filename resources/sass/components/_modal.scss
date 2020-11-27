@@ -1,0 +1,9 @@
+.modal {
+    &-photo {
+        height: 20rem !important;
+        width: 20rem !important;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}

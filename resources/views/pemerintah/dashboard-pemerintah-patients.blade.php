@@ -21,7 +21,7 @@
                 <th scope="col">NIK</th>
                 <th scope="col">E-mail</th>
                 <th scope="col">Photo</th>
-                <th scope="col">Verivied</th>
+                <th scope="col">Verified</th>
             </tr>
         </thead>
         <tbody>
@@ -35,10 +35,33 @@
                 <td>{{$unverified_pasien->name}}</td>
                 <td>{{$unverified_pasien->nik}}</td>
                 <td>{{$unverified_pasien->email}}</td>
-                <td><button class="button">View Photo</button></td>
+                <td>
+                    <button type="button" class="button" data-toggle="modal" data-target="#exampleModal">
+                        View Photo
+                    </button>
+                </td>
                 <td>Yes</td>
                 {{-- <td>{{$unverified_pasien->verified}}</td> --}}
-                
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Patient's Photo</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="" alt="" class="modal-photo">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="cta cta--red" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </tr>
             @endforeach
             @foreach ($verified_pasiens as $verified_pasien)
@@ -51,10 +74,33 @@
                 <td>{{$verified_pasien->name}}</td>
                 <td>{{$verified_pasien->nik}}</td>
                 <td>{{$verified_pasien->email}}</td>
-                <td><button class="button">View Photo</button></td>
+                <td>
+                    <button type="button" class="button" data-toggle="modal" data-target="#exampleModal">
+                        View Photo
+                    </button>
+                </td>
                 {{-- <td>{{$verified_pasien->verified}}</td> --}}
                 <td>No</td>
                 
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Patient's Photo</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="" alt="" class="modal-photo">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="cta cta--red" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </tr>
             @endforeach
         </tbody>

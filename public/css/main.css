@@ -658,6 +658,14 @@ input[type=date]::-webkit-calendar-picker-indicator {
   text-decoration: none;
 }
 
+.modal-photo {
+  height: 20rem !important;
+  width: 20rem !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 .header {
   height: -webkit-max-content;
   height: -moz-max-content;
