@@ -10,7 +10,18 @@ use function Symfony\Component\VarDumper\Dumper\esc;
 class LoginController extends Controller
 {
     public function index(){
-        return view('auth.login');
+        if (Auth::user()) {
+            if (Auth::user()->role = 'pemerintah') {
+                return redirect()->intended('home');
+            }
+            else{
+                return redirect()->intended('home');
+            }
+        }
+        else {
+            return view('auth.login');
+        }
+        
     }
     public function authenticate(Request $request)
     {
