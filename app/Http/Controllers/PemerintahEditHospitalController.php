@@ -6,14 +6,29 @@ use Illuminate\Http\Request;
 use App\Models\RS;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 
 class PemerintahEditHospitalController extends Controller
 {
     public function index(Request $request){
-        $id = $request->id;
-        $hospital = RS::find($id);
 
-        return view('pemerintah.edit-hospital',['hospital' => $hospital]);
+        if (Auth::user()) {
+            if (Auth::user()->role = 'pemerintah') {
+
+                $id = $request->id;
+                $hospital = RS::find($id);
+
+                return view('pemerintah.edit-hospital',['hospital' => $hospital]);
+            }
+            else{
+                return redirect()->intended('home');
+            }
+        }
+        else {
+            return redirect()->intended('home');
+        }
+
+        
     }
 
     public function store(Request $request){

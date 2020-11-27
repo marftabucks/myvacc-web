@@ -11,7 +11,21 @@ use Illuminate\Support\Facades\DB;
 class PemerintahAddHospitalController extends Controller
 {
     public function index(){
-        return view('pemerintah.add-hospital');
+
+        if (Auth::user()) {
+            if (Auth::user()->role = 'pemerintah') {
+
+                return view('pemerintah.add-hospital');
+            }
+            else{
+                return redirect()->intended('home');
+            }
+        }
+        else {
+            return redirect()->intended('home');
+        }
+
+        
     }
     public function store(Request $request){
         // dd($request);
