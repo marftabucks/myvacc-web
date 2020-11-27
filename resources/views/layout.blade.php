@@ -27,10 +27,22 @@
     <body>
         <nav class="header">
             <div class="header__link-box">
+                {{-- logo --}}
                 <a href="{{route('home')}}" class="logo-box">
                     <img src="{{ asset('assets/logo.png') }}" alt="" class="logo">
                 </a>
+                {{-- home --}}
                 <a href="{{route('home')}}" class="link-item"><p class="text-bold text-white">Home</p></a>
+                {{-- dashboard for pemerintah and hospital --}}
+                @if (auth()->user())
+                    @if (auth()->user()->role == 'pemerintah')
+                        <a href="{{route('pemerintah-patients')}}" class="link-item"><p class="text-bold text-white">Dashboard</p></a>
+                    @elseif (auth()->user()->role == 'rs')
+                        <a href="{{route('rs-quota')}}" class="link-item"><p class="text-bold text-white">Dashboard</p></a>
+                    @endif
+                @else
+                    <a href="{{route('home')}}" class="link-item"><p class="text-bold text-white">Home</p></a>
+                @endif
                 <a href="{{route('contact-us')}}" class="link-item"><p class="text-bold text-white">Contact Us</p></a>
             </div>
             <div class="header__util">
