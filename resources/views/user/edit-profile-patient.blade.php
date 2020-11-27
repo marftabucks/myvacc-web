@@ -18,12 +18,12 @@
 
             <div class="form__input">
                 <p class="text-regular">Email</p>
-                <input type="text" class="input" name="email" value="{{$pasien->email}}" readonly>
+                <input type="text" class="input" name="email" value="{{$pasien->email}}" disabled>
             </div>
 
             <div class="form__input">
                 <p class="text-regular">ID</p>
-                <input type="text" class="input" name="id" value="{{$pasien->id}}" readonly>
+                <input type="text" class="input" name="id" value="{{$pasien->id}}" disabled>
             </div>
 
             <div class="form__input">
