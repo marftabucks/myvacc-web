@@ -8,11 +8,9 @@
 <div class="vaccination-form">
     <div class="container container--left container--xl">
         <h2 class="heading-2 margin-bottom-xs align-self-center">Vaccination Form</h1>
-        <p class="status status--success margin-bottom-xl">Your account is verified</p>
+        <p class="status status--success margin-bottom-m">Your account is verified</p>
 
-        <p>NAMA : {{auth()->user()->name}}</p>
-        <p>RS : {{$hospital->name}}</p>
-        <p>Form id : {{$form->id}}</p>
+        <p class="text-regular align-self-center margin-bottom-s">Please choose your preferred date</p>
 
         <table class="table table-striped">
             <thead>

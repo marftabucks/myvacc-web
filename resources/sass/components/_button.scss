@@ -30,4 +30,16 @@
     &--yellow {
         background-color: $color-yellow;
     }
+
+    &--white {
+        background-color: $color-white;
+        color: $color-primary;
+        border: 1px solid $color-primary;
+
+        &:hover {
+            text-decoration: none;
+            color: $color-primary;
+            background-color: $color-white--hover;
+        }
+    }
 }

@@ -45,4 +45,9 @@
         color: transparent;
         text-shadow: 0 0 0 #000;
     }
+
+    &:disabled {
+        border: 1px solid $color-grey-light;
+        cursor: default;
+    }
 }

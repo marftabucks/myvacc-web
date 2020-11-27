@@ -10,6 +10,11 @@
     &:active {
         outline: none;
     }
+
+    &:disabled {
+        border: 1px solid $color-grey-light;
+        cursor: default;
+    }
 }
 
 input[type=file] {

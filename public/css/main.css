@@ -396,6 +396,11 @@ h3 {
   outline: none;
 }
 
+.input:disabled {
+  border: 1px solid #f1f1f1;
+  cursor: default;
+}
+
 input[type=file] {
   width: 100%;
 }
@@ -492,6 +497,11 @@ input[type=date]::-webkit-calendar-picker-indicator {
   text-shadow: 0 0 0 #000;
 }
 
+.select:disabled {
+  border: 1px solid #f1f1f1;
+  cursor: default;
+}
+
 .status {
   align-self: center;
   font-size: 1.1rem;
@@ -578,6 +588,18 @@ input[type=date]::-webkit-calendar-picker-indicator {
   background-color: #f1ba06;
 }
 
+.button--white {
+  background-color: white;
+  color: #092c4d;
+  border: 1px solid #092c4d;
+}
+
+.button--white:hover {
+  text-decoration: none;
+  color: #092c4d;
+  background-color: #ebebeb;
+}
+
 .dropdown {
   background-color: rgba(255, 255, 255, 0);
 }
@@ -634,6 +656,14 @@ input[type=date]::-webkit-calendar-picker-indicator {
   background-color: #f1f1f1;
   color: #092c4d;
   text-decoration: none;
+}
+
+.modal-photo {
+  height: 20rem !important;
+  width: 20rem !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .header {
