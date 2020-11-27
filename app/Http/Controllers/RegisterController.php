@@ -13,14 +13,14 @@ class RegisterController extends Controller
     public function index(){
         if (Auth::user()) {
             if (Auth::user()->role = 'pemerintah') {
-                return view('auth.register');
+                return redirect()->intended('home');
             }
             else{
                 return redirect()->intended('home');
             }
         }
         else {
-            return redirect()->intended('home');
+            return view('auth.register');
         }
     }
     public function store(Request $request){
