@@ -12,7 +12,7 @@ class RSEditProfileController extends Controller
 {
     public function index(){
         if (Auth::user()) {
-            if (Auth::user()->role = 'rs') {
+            if (Auth::user()->role == 'rs') {
                 $id = Auth::id();
                 $hospital = RS::find($id);
 

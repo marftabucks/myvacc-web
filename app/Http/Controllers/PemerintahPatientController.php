@@ -11,19 +11,27 @@ class PemerintahPatientController extends Controller
 {
     public function index(){
         if (Auth::user()) {
-            if (Auth::user()->role = 'pemerintah') {
-
+            if (Auth::user()->role == 'pemerintah') {
                 $verified_pasiens = DB::table('pasiens')
                                     ->select(DB::raw('id, name, email, nik, selfie, verified'))
                                     ->where('verified', '=', 1)
                                     ->get();
-                
                 $unverified_pasiens = DB::table('pasiens')
                                     ->select(DB::raw('id, name, email, nik, selfie, verified'))
                                     ->where('verified', '=', 0)
                                     ->get();
+                // foreach ($verified_pasiens as &$value) {
+                //     $value->selfie = 'uploads/'.$value->selfie;
+                //     $value->save();
+                // }
+                // foreach ($unverified_pasiens as &$value) {
+                //     $value->selfie = 'uploads/'.$value->selfie;
+                // }
                 
-                return view('pemerintah.dashboard-pemerintah-patients',['verified_pasiens' => $verified_pasiens,'unverified_pasiens' => $unverified_pasiens]);
+                return view('pemerintah.dashboard-pemerintah-patients',[
+                    'verified_pasiens' => $verified_pasiens,
+                    'unverified_pasiens' => $unverified_pasiens
+                    ]);
             }
             else{
                 return redirect()->intended('home');
@@ -32,14 +40,10 @@ class PemerintahPatientController extends Controller
         else {
             return redirect()->intended('home');
         }
-
-
         
     }
 
     public function store(Request $request){
-
-        // dd($request);
         $id = $request->id;
 
         $pasien = Pasien::find($id);
@@ -53,4 +57,3 @@ class PemerintahPatientController extends Controller
         return redirect()->intended('pemerintah-patients');
     }
 }
- 

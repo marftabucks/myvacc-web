@@ -9,7 +9,7 @@
     <div class="container container--m">
         <h2 class="heading-2 margin-bottom-l">Register</h1>
 
-        <form action="{{route('register')}}" method="post" class="form">
+        <form action="{{route('register')}}" method="post" class="form" enctype="multipart/form-data">
             @csrf
             <div class="form__input">
                 <p class="text-regular">Full Name</p>
@@ -33,7 +33,7 @@
 
             <div class="form__input margin-bottom-m">
                 <p class="text-regular">Selfie with ID Card</p>
-                <input type="file" name="selfie" id="selfie">
+                <input type="file" name="file" id="file" required>
             </div>
             
             <input type="submit" value="Register" class="cta cta--secondary margin-bottom-xs">

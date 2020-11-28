@@ -13,7 +13,7 @@ class PemerintahEditHospitalController extends Controller
     public function index(Request $request){
 
         if (Auth::user()) {
-            if (Auth::user()->role = 'pemerintah') {
+            if (Auth::user()->role == 'pemerintah') {
 
                 $id = $request->id;
                 $hospital = RS::find($id);

@@ -11,7 +11,7 @@ class RSPatientsController extends Controller
 {
     public function index(){
         if (Auth::user()) {
-            if (Auth::user()->role = 'rs') {
+            if (Auth::user()->role == 'rs') {
                 $list = DB::table('pasiens')
                         ->join('forms', function ($join) {$join->on('pasiens.id', '=', 'forms.id_user');})
                         ->where('id_rs','=',Auth::user()->id)

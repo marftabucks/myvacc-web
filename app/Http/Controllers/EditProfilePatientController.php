@@ -13,7 +13,7 @@ class EditProfilePatientController extends Controller
     public function index(){
 
         if (Auth::user()) {
-            if (Auth::user()->role = 'pasien') {
+            if (Auth::user()->role == 'pasien') {
                 $id = Auth::id();
                 $pasien = Pasien::find($id);
 

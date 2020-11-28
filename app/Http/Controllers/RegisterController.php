@@ -12,7 +12,7 @@ class RegisterController extends Controller
 {
     public function index(){
         if (Auth::user()) {
-            if (Auth::user()->role = 'pemerintah') {
+            if (Auth::user()->role == 'pemerintah') {
                 return redirect()->intended('home');
             }
             else{
@@ -24,6 +24,8 @@ class RegisterController extends Controller
         }
     }
     public function store(Request $request){
+
+        // dd($request);
         // Storing data to database
         User::create([
             'name' => $request->name,
@@ -34,12 +36,15 @@ class RegisterController extends Controller
         $credentials = $request->only('email', 'password');
 
         if (Auth::attempt($credentials)) {
+            $fileName = Auth::id().'.'.$request->file->extension();
+   
+            $request->file->move(public_path('assets'), $fileName);
             Pasien::create([
                 'id' => Auth::id(),
                 'name' => $request->name,
                 'nik' => $request->nik,
                 'email' => $request->email,
-                'selfie' => $request->selfie,
+                'selfie' => $fileName,
             ]);
             return redirect()->intended('home');
         }

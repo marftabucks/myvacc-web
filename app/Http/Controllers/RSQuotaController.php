@@ -11,7 +11,7 @@ class RSQuotaController extends Controller
 {
     public function index(){
         if (Auth::user()) {
-            if (Auth::user()->role = 'rs') {
+            if (Auth::user()->role == 'rs') {
                 $quotas = DB::table('quotas')
                             ->select(DB::raw('name_rs, date, quota, available'))
                             ->where('id_rs', '=', Auth::id())

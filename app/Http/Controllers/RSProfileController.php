@@ -10,7 +10,7 @@ class RSProfileController extends Controller
 {
     public function index(){
         if (Auth::user()) {
-            if (Auth::user()->role = 'rs') {
+            if (Auth::user()->role == 'rs') {
                 $rs = DB::table('r_s')
                     -> select(DB::raw('id,name,email,province,city,address'))
                     -> where('id','=',Auth::id())
