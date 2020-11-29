@@ -353,7 +353,7 @@ h3 {
 }
 
 .container {
-  padding: 8rem 3rem;
+  padding: 10rem 3rem;
   box-shadow: 3px 5px 1rem 1px #a5a5a594;
   display: flex;
   flex-direction: column;
@@ -716,9 +716,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 .footer {
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
   background: #092c4d;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -754,7 +751,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .login,
 .register {
-  padding: 7rem 15rem;
+  padding: 10rem 15rem;
 }
 
 .vaccination-ticket,

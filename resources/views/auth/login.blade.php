@@ -18,7 +18,7 @@
                 <input type="e-mail" class="input" name="email" required>
             </div>
 
-            <div class="form__input">
+            <div class="form__input margin-bottom-m">
                 <p class="text-regular">Password</p>
                 <input type="password" class="input" name="password" required>
             </div>

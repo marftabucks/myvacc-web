@@ -31,7 +31,7 @@
                 <input type="password" class="input" name="password" required>
             </div>
 
-            <div class="form__input">
+            <div class="form__input margin-bottom-m">
                 <p class="text-regular">Selfie with ID Card</p>
                 <input type="file" name="file" id="file" required>
             </div>
