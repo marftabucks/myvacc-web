@@ -40,7 +40,7 @@
                         View Photo
                     </button>
                 </td>
-                <td>Yes</td>
+                <td>No</td>
 
                 <!-- Modal -->
                 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -79,7 +79,7 @@
                     </button>
                 </td>
                 {{-- <td>{{$verified_pasien->verified}}</td> --}}
-                <td>No</td>
+                <td>Yes</td>
                 
                 <!-- Modal -->
                 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
