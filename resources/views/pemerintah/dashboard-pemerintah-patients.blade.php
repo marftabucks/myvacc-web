@@ -36,14 +36,14 @@
                 <td>{{$unverified_pasien->nik}}</td>
                 <td>{{$unverified_pasien->email}}</td>
                 <td>
-                    <button type="button" class="button" data-toggle="modal" data-target="#exampleModal">
+                    <button type="button" class="button" data-toggle="modal" data-target="#exampleModal{{$unverified_pasien->id}}">
                         View Photo
                     </button>
                 </td>
                 <td>No</td>
 
                 <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal fade" id="exampleModal{{$unverified_pasien->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModal{{$unverified_pasien->id}}Label" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -74,7 +74,7 @@
                 <td>{{$verified_pasien->nik}}</td>
                 <td>{{$verified_pasien->email}}</td>
                 <td>
-                    <button type="button" class="button" data-toggle="modal" data-target="#exampleModal">
+                    <button type="button" class="button" data-toggle="modal" data-target="#exampleModal{{$verified_pasien->id}}">
                         View Photo
                     </button>
                 </td>
@@ -82,7 +82,7 @@
                 <td>Yes</td>
                 
                 <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal fade" id="exampleModal{{$verified_pasien->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModal{{$verified_pasien->id}}Label" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
