@@ -40,8 +40,6 @@
                     @elseif (auth()->user()->role == 'rs')
                         <a href="{{route('rs-quota')}}" class="link-item"><p class="text-bold text-white">Dashboard</p></a>
                     @endif
-                @else
-                    <a href="{{route('home')}}" class="link-item"><p class="text-bold text-white">Home</p></a>
                 @endif
                 <a href="{{route('contact-us')}}" class="link-item"><p class="text-bold text-white">Contact Us</p></a>
             </div>
